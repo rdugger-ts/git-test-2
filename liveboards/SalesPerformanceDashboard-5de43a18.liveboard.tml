@@ -1,0 +1,309 @@
+obj_id: SalesPerformanceDashboard-5de43a18
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: List all columns in the TSEMBED worksheet along with their descriptions.
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      search_query: "[Description]"
+      answer_columns:
+      - name: Description
+      table:
+        table_columns:
+        - column_id: Description
+          show_headline: false
+        ordered_column_ids:
+        - Description
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Description\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Description
+        axis_configs:
+        - "y":
+          - Description
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Description\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d6cb7b97-4cb2-4ee6-bc7f-07020615decc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Description\"],\"isOpposite\": false}},{\"id\": \"0b577268-ad1d-4a7d-89d3-a4a0d579f3d3\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: b779a51a-6278-4c2f-ba7a-f41d32afcf99
+  - id: Viz_2
+    answer:
+      name: Provide sample data values for each column in the TSEMBED worksheet.
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      search_query: "[Iswon] [Billingpostalcode] [Annualrevenue] [Expectedrevenue] [Amount] [Numberofemployees] [Shippingpostalcode] [Isclosed] [Account Createddate] [Account Createddate].monthly [Createddate] [Createddate].monthly [Closedate] [Closedate].monthly [Tickersymbol] [Shippinglatitude] [Accountnumber] [Billingcity] [Billingstate] [Shippingcountry] [Website] [Account Name] [SF Opp Link] [Billingstreet] [Shippingcity] [Billinglongitude] [Account Type] [Lastactivitydate] [Id] [Billinglatitude] [Partneraccountid] [Account Id] [Ownerid] [Stagename] [Name] [Billingcountry] [Phone] [Parentid] [Shippinglongitude] [Account Ownerid] [Shippingstate] [_shipPostalCdString] [Description] [Shippingstreet] [_PostalCd_filter] [Billinggeocodeaccuracy] [Active C] [Forecastcategory] [Createdbyid] [Type]"
+      answer_columns:
+      - name: Account Id
+      - name: Account Name
+      - name: Account Ownerid
+      - name: Account Type
+      - name: Accountnumber
+      - name: Active C
+      - name: Billingcity
+      - name: Billingcountry
+      - name: Billinggeocodeaccuracy
+      - name: Billinglatitude
+      - name: Billinglongitude
+      - name: Billingstate
+      - name: Billingstreet
+      - name: Createdbyid
+      - name: Description
+      - name: Forecastcategory
+      - name: Id
+      - name: Lastactivitydate
+      - name: Month(Account Createddate)
+      - name: Month(Closedate)
+      - name: Month(Createddate)
+      - name: Name
+      - name: Ownerid
+      - name: Parentid
+      - name: Partneraccountid
+      - name: Phone
+      - name: SF Opp Link
+      - name: Shippingcity
+      - name: Shippingcountry
+      - name: Shippinglatitude
+      - name: Shippinglongitude
+      - name: Shippingstate
+      - name: Shippingstreet
+      - name: Stagename
+      - name: Tickersymbol
+      - name: Total Amount
+      - name: Total Annualrevenue
+      - name: Total Billingpostalcode
+      - name: Total Expectedrevenue
+      - name: Total Isclosed
+      - name: Total Iswon
+      - name: Total Numberofemployees
+      - name: Total Shippingpostalcode
+      - name: Type
+      - name: Website
+      - name: _PostalCd_filter
+      - name: _shipPostalCdString
+      table:
+        table_columns:
+        - column_id: Account Id
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Account Ownerid
+          show_headline: false
+        - column_id: Account Type
+          show_headline: false
+        - column_id: Accountnumber
+          show_headline: false
+        - column_id: Active C
+          show_headline: false
+        - column_id: Billingcity
+          show_headline: false
+        - column_id: Billingcountry
+          show_headline: false
+        - column_id: Billinggeocodeaccuracy
+          show_headline: false
+        - column_id: Billinglatitude
+          show_headline: false
+        - column_id: Billinglongitude
+          show_headline: false
+        - column_id: Billingstate
+          show_headline: false
+        - column_id: Billingstreet
+          show_headline: false
+        - column_id: Createdbyid
+          show_headline: false
+        - column_id: Description
+          show_headline: false
+        - column_id: Forecastcategory
+          show_headline: false
+        - column_id: Id
+          show_headline: false
+        - column_id: Lastactivitydate
+          show_headline: false
+        - column_id: Month(Account Createddate)
+          show_headline: false
+        - column_id: Month(Closedate)
+          show_headline: false
+        - column_id: Month(Createddate)
+          show_headline: false
+        - column_id: Name
+          show_headline: false
+        - column_id: Ownerid
+          show_headline: false
+        - column_id: Parentid
+          show_headline: false
+        - column_id: Partneraccountid
+          show_headline: false
+        - column_id: Phone
+          show_headline: false
+        - column_id: SF Opp Link
+          show_headline: false
+        - column_id: Shippingcity
+          show_headline: false
+        - column_id: Shippingcountry
+          show_headline: false
+        - column_id: Shippinglatitude
+          show_headline: false
+        - column_id: Shippinglongitude
+          show_headline: false
+        - column_id: Shippingstate
+          show_headline: false
+        - column_id: Shippingstreet
+          show_headline: false
+        - column_id: Stagename
+          show_headline: false
+        - column_id: Tickersymbol
+          show_headline: false
+        - column_id: Total Amount
+          show_headline: false
+        - column_id: Total Annualrevenue
+          show_headline: false
+        - column_id: Total Billingpostalcode
+          show_headline: false
+        - column_id: Total Expectedrevenue
+          show_headline: false
+        - column_id: Total Isclosed
+          show_headline: false
+        - column_id: Total Iswon
+          show_headline: false
+        - column_id: Total Numberofemployees
+          show_headline: false
+        - column_id: Total Shippingpostalcode
+          show_headline: false
+        - column_id: Type
+          show_headline: false
+        - column_id: Website
+          show_headline: false
+        - column_id: _PostalCd_filter
+          show_headline: false
+        - column_id: _shipPostalCdString
+          show_headline: false
+        ordered_column_ids:
+        - Month(Account Createddate)
+        - Month(Createddate)
+        - Month(Closedate)
+        - Tickersymbol
+        - Shippinglatitude
+        - Accountnumber
+        - Billingcity
+        - Billingstate
+        - Shippingcountry
+        - Website
+        - Account Name
+        - SF Opp Link
+        - Billingstreet
+        - Shippingcity
+        - Billinglongitude
+        - Account Type
+        - Lastactivitydate
+        - Id
+        - Billinglatitude
+        - Partneraccountid
+        - Account Id
+        - Ownerid
+        - Stagename
+        - Name
+        - Billingcountry
+        - Phone
+        - Parentid
+        - Shippinglongitude
+        - Account Ownerid
+        - Shippingstate
+        - _shipPostalCdString
+        - Description
+        - Shippingstreet
+        - _PostalCd_filter
+        - Billinggeocodeaccuracy
+        - Active C
+        - Forecastcategory
+        - Createdbyid
+        - Type
+        - Total Iswon
+        - Total Billingpostalcode
+        - Total Annualrevenue
+        - Total Expectedrevenue
+        - Total Amount
+        - Total Numberofemployees
+        - Total Shippingpostalcode
+        - Total Isclosed
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Account Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"Tickersymbol\",\"columnProperty\": {}},{\"columnId\": \"Shippinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Accountnumber\",\"columnProperty\": {}},{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Shippingcountry\",\"columnProperty\": {}},{\"columnId\": \"Website\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {}},{\"columnId\": \"Billingstreet\",\"columnProperty\": {}},{\"columnId\": \"Shippingcity\",\"columnProperty\": {}},{\"columnId\": \"Billinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Lastactivitydate\",\"columnProperty\": {}},{\"columnId\": \"Id\",\"columnProperty\": {}},{\"columnId\": \"Billinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Partneraccountid\",\"columnProperty\": {}},{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Phone\",\"columnProperty\": {}},{\"columnId\": \"Parentid\",\"columnProperty\": {}},{\"columnId\": \"Shippinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Account Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Shippingstate\",\"columnProperty\": {}},{\"columnId\": \"_shipPostalCdString\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}},{\"columnId\": \"Shippingstreet\",\"columnProperty\": {}},{\"columnId\": \"_PostalCd_filter\",\"columnProperty\": {}},{\"columnId\": \"Billinggeocodeaccuracy\",\"columnProperty\": {}},{\"columnId\": \"Active C\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"Createdbyid\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Total Iswon\",\"columnProperty\": {}},{\"columnId\": \"Total Billingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Expectedrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}},{\"columnId\": \"Total Shippingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Total Isclosed\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Account Id
+        - column_id: Account Name
+        - column_id: Account Ownerid
+        - column_id: Account Type
+        - column_id: Accountnumber
+        - column_id: Active C
+        - column_id: Billingcity
+        - column_id: Billingcountry
+        - column_id: Billinggeocodeaccuracy
+        - column_id: Billinglatitude
+        - column_id: Billinglongitude
+        - column_id: Billingstate
+        - column_id: Billingstreet
+        - column_id: Createdbyid
+        - column_id: Description
+        - column_id: Forecastcategory
+        - column_id: Id
+        - column_id: Lastactivitydate
+        - column_id: Month(Account Createddate)
+        - column_id: Month(Closedate)
+        - column_id: Month(Createddate)
+        - column_id: Name
+        - column_id: Ownerid
+        - column_id: Parentid
+        - column_id: Partneraccountid
+        - column_id: Phone
+        - column_id: SF Opp Link
+        - column_id: Shippingcity
+        - column_id: Shippingcountry
+        - column_id: Shippinglatitude
+        - column_id: Shippinglongitude
+        - column_id: Shippingstate
+        - column_id: Shippingstreet
+        - column_id: Stagename
+        - column_id: Tickersymbol
+        - column_id: Total Amount
+        - column_id: Total Annualrevenue
+        - column_id: Total Billingpostalcode
+        - column_id: Total Expectedrevenue
+        - column_id: Total Isclosed
+        - column_id: Total Iswon
+        - column_id: Total Numberofemployees
+        - column_id: Total Shippingpostalcode
+        - column_id: Type
+        - column_id: Website
+        - column_id: _PostalCd_filter
+        - column_id: _shipPostalCdString
+        axis_configs:
+        - x:
+          - Month(Account Createddate)
+          "y":
+          - Total Iswon
+          - Total Billingpostalcode
+          - Total Annualrevenue
+          - Total Expectedrevenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Month(Account Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Accountnumber\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}},{\"columnId\": \"Createdbyid\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"_PostalCd_filter\",\"columnProperty\": {}},{\"columnId\": \"Total Expectedrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Isclosed\",\"columnProperty\": {}},{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Id\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Billinggeocodeaccuracy\",\"columnProperty\": {}},{\"columnId\": \"Parentid\",\"columnProperty\": {}},{\"columnId\": \"Phone\",\"columnProperty\": {}},{\"columnId\": \"Shippingstreet\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Shippinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Billingstreet\",\"columnProperty\": {}},{\"columnId\": \"Billinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Total Billingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Tickersymbol\",\"columnProperty\": {}},{\"columnId\": \"Total Iswon\",\"columnProperty\": {}},{\"columnId\": \"Website\",\"columnProperty\": {}},{\"columnId\": \"Shippingcountry\",\"columnProperty\": {}},{\"columnId\": \"Shippinglongitude\",\"columnProperty\": {}},{\"columnId\": \"_shipPostalCdString\",\"columnProperty\": {}},{\"columnId\": \"Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Billinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Shippingstate\",\"columnProperty\": {}},{\"columnId\": \"Active C\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}},{\"columnId\": \"Account Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Total Shippingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Lastactivitydate\",\"columnProperty\": {}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Partneraccountid\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Shippingcity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a14481f1-b2eb-4228-af08-51c25d1e63af\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Iswon\"],\"isOpposite\": false}},{\"id\": \"44ee2500-a1df-48ea-b718-d0d4e84ada4b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Billingpostalcode\"],\"isOpposite\": true}},{\"id\": \"51d17fc1-47f6-40f0-8feb-9835711d7d24\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Annualrevenue\"],\"isOpposite\": true}},{\"id\": \"2fdad28e-aa31-4daa-9eb1-802324e619fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Expectedrevenue\"],\"isOpposite\": true}},{\"id\": \"0f8b9b67-6938-49d1-822c-d883caee9a35\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Account Createddate)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 60dd088e-f902-4c65-830d-37fba020d716
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
