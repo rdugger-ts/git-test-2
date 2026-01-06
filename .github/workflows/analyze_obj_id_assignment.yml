@@ -60,6 +60,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Show branch and environment
+      run: echo "Branch=${{ github.ref_name }} | Env=${{ job.environment }}"
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
