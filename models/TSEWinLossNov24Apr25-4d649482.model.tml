@@ -1,0 +1,163 @@
+obj_id: TSEWinLossNov24Apr25-4d649482
+model:
+  name: TSE WinLoss Nov24 Apr25
+  description: The worksheet titled "TSE WinLoss Nov24 Apr25" provides a comprehensive overview of sales opportunities and their outcomes over a specific period. It includes detailed information on accounts, such as industry type, product offerings sold, and the account owner. Additionally, it tracks the sales process from creation to closure, documenting key steps, competitor analysis, and reasons for wins or losses, which helps in strategic planning and performance evaluation. (AI generated)
+  model_tables:
+  - name: Nov24_Apr25_TSE_WinAndLoss
+    obj_id: Nov24_Apr25_TSE_WinAndLoss-ee840cb2
+  columns:
+  - name: Account Industry
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Account Industry
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Name
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Account Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Owner
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Account Owner
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Product Edition(s) Sold
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Product Offering(s) Sold
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Close Date
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+  - name: Competitors
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Competitors
+    properties:
+      column_type: ATTRIBUTE
+  - name: Created Date
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+  - name: Cs Next Step
+    column_id: Nov24_Apr25_TSE_WinAndLoss::CS Next Step
+    properties:
+      column_type: ATTRIBUTE
+  - name: Cs Next Step Detail
+    column_id: Nov24_Apr25_TSE_WinAndLoss::CS Next Step Detail
+    properties:
+      column_type: ATTRIBUTE
+  - name: Cs Next Step History
+    column_id: Nov24_Apr25_TSE_WinAndLoss::CS Next Step History
+    properties:
+      column_type: ATTRIBUTE
+  - name: Days Open
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Days Open
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Mode Next Steps (csm Notes)
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Mode Next Steps (CSM Notes)
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Bva Next Steps
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity BVA Next Steps
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Cloud Data Warehouse
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Deployment Forecast
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Disqualified/downsell Reason
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Dq/downsell Comment
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity DQ/Downsell Comment
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Id
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Name
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Net Acv
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Opportunity Net Acv Currency
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Presale Notes
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Product Category
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Product Type
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Region
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Type
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: 'Opportunity: Prior Stage'
+    column_id: 'Nov24_Apr25_TSE_WinAndLoss::Opportunity: Prior Stage'
+    properties:
+      column_type: ATTRIBUTE
+  - name: 'Opportunity: Tse Specialist Notes'
+    column_id: 'Nov24_Apr25_TSE_WinAndLoss::Opportunity: TSE Specialist Notes'
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Edition (s) Sold
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sdr Next Step
+    column_id: Nov24_Apr25_TSE_WinAndLoss::SDR Next Step
+    properties:
+      column_type: ATTRIBUTE
+  - name: Secondary Loss/downsell Reason
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+  - name: Stage
+    column_id: Nov24_Apr25_TSE_WinAndLoss::Stage
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tcv
+    column_id: Nov24_Apr25_TSE_WinAndLoss::TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Tcv Currency
+    column_id: Nov24_Apr25_TSE_WinAndLoss::TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
