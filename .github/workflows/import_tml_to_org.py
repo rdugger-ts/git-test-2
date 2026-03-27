@@ -184,24 +184,75 @@ print("====================================")
 # that the same token can immediately see what was just created.
 # Optional post-import verification search using direct REST call
 # Optional post-import verification for CONNECTION using direct REST call
+# Optional post-import verification for CONNECTION using V2 REST call
 try:
     if object_type == "CONNECTION":
-        print("Running post-import connection verification via direct REST call...")
+        print("Running post-import connection verification via V2 REST call...")
 
         headers = {
             "Authorization": f"Bearer {ts.bearer_token}",
+            "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
-        resp = requests.get(
-            url=f"{server}/tspublic/v1/connection/list",
+        verification_url = f"{server.rstrip('/')}/api/rest/2.0/connection/search"
+
+        # Search broadly first
+        verification_payload = {}
+
+        print(f"Verification URL: {verification_url}")
+        print("Verification payload:")
+        print(json.dumps(verification_payload, indent=2))
+
+        resp = requests.post(
+            url=verification_url,
             headers=headers,
+            json=verification_payload,
             timeout=60,
         )
 
-        print(f"Verification connection-list HTTP status: {resp.status_code}")
-        print("Verification connection-list response:")
-        print(json.dumps(resp.json(), indent=2))
+        print(f"Verification HTTP status: {resp.status_code}")
+        print("Verification raw response body:")
+        print(resp.text)
+
+        if resp.headers.get("content-type", "").lower().startswith("application/json"):
+            parsed = resp.json()
+            print("Verification parsed JSON response:")
+            print(json.dumps(parsed, indent=2))
+
+            expected_names = {
+                "RAD - Snow2",
+                "Retail Sales Data",
+                "RAD - Snow",
+            }
+
+            found_names = set()
+
+            if isinstance(parsed, list):
+                for item in parsed:
+                    name = item.get("name")
+                    if name:
+                        found_names.add(name)
+            elif isinstance(parsed, dict):
+                # handle either flat dict or dict with records/items containers
+                for key in ["data", "items", "records"]:
+                    if key in parsed and isinstance(parsed[key], list):
+                        for item in parsed[key]:
+                            name = item.get("name")
+                            if name:
+                                found_names.add(name)
+
+            print("Expected connection names:")
+            print(sorted(expected_names))
+            print("Found connection names:")
+            print(sorted(found_names))
+
+            missing = expected_names - found_names
+            if missing:
+                print("Missing expected connections:")
+                print(sorted(missing))
+            else:
+                print("All expected connections were found in verification search.")
 
     else:
         print(f"No CONNECTION verification needed for OBJECT_TYPE={object_type}")
