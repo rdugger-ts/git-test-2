@@ -1,7 +1,7 @@
 import os
 import json
+import requests
 import requests.exceptions
-
 from thoughtspot_rest_api import *
 
 gh_action_none = "{None}"
@@ -182,35 +182,35 @@ print("====================================")
 # Optional post-import verification search
 # This is primarily useful for CONNECTION imports where you want to confirm
 # that the same token can immediately see what was just created.
+# Optional post-import verification search using direct REST call
 try:
-    print("Running post-import metadata search for verification...")
+    print("Running post-import verification search via direct REST call...")
 
-    metadata_type_map = {
-        "CONNECTION": "DATA_SOURCE",
-        "TABLE": "LOGICAL_TABLE",
-        "MODEL": "LOGICAL_TABLE",
-        "DATA_MODEL": "LOGICAL_TABLE",
-        "LIVEBOARD": "LIVEBOARD",
-        "ANSWER": "ANSWER",
-        "CONTENT": "LIVEBOARD",
+    headers = {
+        "Authorization": f"Bearer {ts.bearer_token}",
+        "Content-Type": "application/json",
     }
 
-    search_type = metadata_type_map.get(object_type)
+    search_payload = {
+        "metadata": [
+            {
+                "type": "DATA_SOURCE"
+            }
+        ],
+        "record_size": 100
+    }
 
-    if search_type:
-        search_resp = ts.metadata_search(
-            metadata=[{"type": search_type}],
-            record_size=100,
-        )
-        print("Post-import metadata search response:")
-        print(json.dumps(search_resp, indent=2))
-    else:
-        print(f"No verification metadata type mapped for OBJECT_TYPE={object_type}; skipping search.")
+    resp = requests.post(
+        url=f"{server}/api/rest/2.0/metadata/search",
+        headers=headers,
+        json=search_payload,
+        timeout=60,
+    )
 
-except requests.exceptions.HTTPError as e:
-    print("Post-import verification search failed with HTTPError.")
-    print(e)
-    print(e.response.content)
+    print(f"Verification search HTTP status: {resp.status_code}")
+    print("Verification search response:")
+    print(json.dumps(resp.json(), indent=2))
+
 except Exception as e:
     print("Post-import verification search failed with unexpected error.")
     print(str(e))
