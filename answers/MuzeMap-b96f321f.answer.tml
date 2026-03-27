@@ -1,0 +1,58 @@
+obj_id: MuzeMap-b96f321f
+answer:
+  name: Muze Map
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    obj_id: SampleRetail-Apparel-cd252e5c
+  search_query: "[latitude] [longitude] [state] [city] [sales]"
+  answer_columns:
+  - name: Total sales
+  - name: city
+  - name: latitude
+  - name: longitude
+  - name: state
+  table:
+    table_columns:
+    - column_id: Total sales
+      show_headline: false
+    - column_id: city
+      show_headline: false
+    - column_id: latitude
+      show_headline: false
+    - column_id: longitude
+      show_headline: false
+    - column_id: state
+      show_headline: false
+    ordered_column_ids:
+    - latitude
+    - longitude
+    - state
+    - city
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: CUSTOM_CHART
+    chart_columns:
+    - column_id: Total sales
+    - column_id: city
+    - column_id: latitude
+    - column_id: longitude
+    - column_id: state
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0816801168248821E7,4944987.440845069],\"zoomLevel\": 4.938603618589076,\"extent\": [-1.3960242952910073E7,2977141.7707725773,-7673359.383587569,6912833.11091756]},\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"latitude\",\"columnProperty\": {}},{\"columnId\": \"longitude\",\"columnProperty\": {}},{\"columnId\": \"state\",\"columnProperty\": {}},{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2d03bf09-d615-497d-9688-cf5c8a43d0c8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"75dc6671-8fae-42d9-8de9-e6c40a12c2d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"latitude\",\"longitude\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"state\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - latitude
+        - longitude
+        - state
+        - city
+        - Total sales
+    custom_chart_name: Muze Studio (rad)
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"KGFzeW5jIGZ1bmN0aW9uICgpIHsKICAvLyBMb2FkIEQzIGFuZCBUb3BvSlNPTiBkeW5hbWljYWxseQogIGNvbnN0IGQzID0gYXdhaXQgaW1wb3J0KCdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2QzQDcvK2VzbScpOwogIGNvbnN0IHsgZmVhdHVyZSB9ID0gYXdhaXQgaW1wb3J0KCdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3RvcG9qc29uLWNsaWVudEAzLytlc20nKTsKCiAgY29uc3QgbW91bnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZ2VvLWJ1YmJsZXMnKTsKICBjb25zdCBXID0gbW91bnQuY2xpZW50V2lkdGggfHwgMTAwMDsKICBjb25zdCBIID0gbW91bnQuY2xpZW50SGVpZ2h0IHx8IDU2MDsKCiAgLy8gTG9hZCBVUyBzdGF0ZXMgVG9wb0pTT04KICBjb25zdCB1cyA9IGF3YWl0IGZldGNoKCdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3VzLWF0bGFzQDMvc3RhdGVzLTEwbS5qc29uJykudGhlbihyID0+IHIuanNvbigpKTsKICBjb25zdCBzdGF0ZXMgPSBmZWF0dXJlKHVzLCB1cy5vYmplY3RzLnN0YXRlcyk7CgogIC8vIFByb2plY3Rpb24KICBjb25zdCBwcm9qZWN0aW9uID0gZDMuZ2VvQWxiZXJzVXNhKCkuZml0U2l6ZShbVywgSF0sIHN0YXRlcyk7CiAgY29uc3QgcGF0aCA9IGQzLmdlb1BhdGgoKS5wcm9qZWN0aW9uKHByb2plY3Rpb24pOwoKICAvLyBEdW1teSB0ZXN0IGRhdGEgKHJlcGxhY2Ugd2l0aCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5KQogIGNvbnN0IGRhdGEgPSBbCiAgICB7IGNpdHk6ICdUYW1wYScsIHN0YXRlOiAnRkwnLCBsYXRpdHVkZTogMjcuOTUsIGxvbmdpdHVkZTogLTgyLjQ2LCB0b3RhbF9zYWxlczogMTAwMCB9LAogICAgeyBjaXR5OiAnRGFsbGFzJywgc3RhdGU6ICdUWCcsIGxhdGl0dWRlOiAzMi43OCwgbG9uZ2l0dWRlOiAtOTYuOCwgdG90YWxfc2FsZXM6IDcwMCB9LAogICAgeyBjaXR5OiAnU2VhdHRsZScsIHN0YXRlOiAnV0EnLCBsYXRpdHVkZTogNDcuNiwgbG9uZ2l0dWRlOiAtMTIyLjMsIHRvdGFsX3NhbGVzOiA1MDAgfSwKICAgIHsgY2l0eTogJ0hvbm9sdWx1Jywgc3RhdGU6ICdISScsIGxhdGl0dWRlOiAyMS4zLCBsb25naXR1ZGU6IC0xNTcuOCwgdG90YWxfc2FsZXM6IDI1MCB9LAogICAgeyBjaXR5OiAnQW5jaG9yYWdlJywgc3RhdGU6ICdBSycsIGxhdGl0dWRlOiA2MS4yLCBsb25naXR1ZGU6IC0xNDkuOSwgdG90YWxfc2FsZXM6IDMwMCB9CiAgXTsKCiAgLy8gRHJhdyBiYXNlIG1hcAogIGNvbnN0IHN2ZyA9IGQzLnNlbGVjdChtb3VudCkuYXBwZW5kKCdzdmcnKS5hdHRyKCd3aWR0aCcsIFcpLmF0dHIoJ2hlaWdodCcsIEgpOwoKICBzdmcuYXBwZW5kKCdnJykKICAgIC5zZWxlY3RBbGwoJ3BhdGgnKQogICAgLmRhdGEoc3RhdGVzLmZlYXR1cmVzKQogICAgLmVudGVyKCkKICAgIC5hcHBlbmQoJ3BhdGgnKQogICAgLmF0dHIoJ2QnLCBwYXRoKQogICAgLmF0dHIoJ2ZpbGwnLCAnI2Y3ZjdmNycpCiAgICAuYXR0cignc3Ryb2tlJywgJyM5OTknKQogICAgLmF0dHIoJ3N0cm9rZS13aWR0aCcsIDAuNSk7CgogIC8vIFNjYWxlICsgYnViYmxlcwogIGNvbnN0IHNpemUgPSBkMy5zY2FsZVNxcnQoKQogICAgLmRvbWFpbihbMCwgZDMubWF4KGRhdGEsIGQgPT4gZC50b3RhbF9zYWxlcyldKQogICAgLnJhbmdlKFsyLCAxNF0pOwoKICBzdmcuYXBwZW5kKCdnJykKICAgIC5zZWxlY3RBbGwoJ2NpcmNsZScpCiAgICAuZGF0YShkYXRhKQogICAgLmVudGVyKCkKICAgIC5hcHBlbmQoJ2NpcmNsZScpCiAgICAuYXR0cignY3gnLCBkID0+IHByb2plY3Rpb24oW2QubG9uZ2l0dWRlLCBkLmxhdGl0dWRlXSlbMF0pCiAgICAuYXR0cignY3knLCBkID0+IHByb2plY3Rpb24oW2QubG9uZ2l0dWRlLCBkLmxhdGl0dWRlXSlbMV0pCiAgICAuYXR0cigncicsIGQgPT4gc2l6ZShkLnRvdGFsX3NhbGVzKSkKICAgIC5hdHRyKCdmaWxsJywgJyNmMjhjMjgnKQogICAgLmF0dHIoJ29wYWNpdHknLCAwLjgpCiAgICAuYXR0cignc3Ryb2tlJywgJyM0NDQnKQogICAgLmF0dHIoJ3N0cm9rZS13aWR0aCcsIDAuNSk7Cn0pKCk7Cg\\u003d\\u003d\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ\\u003d\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iZ2VvLWJ1YmJsZXMiIHN0eWxlPSJ3aWR0aDoxMDAlOyBoZWlnaHQ6NTYwcHg7Ij48L2Rpdj4K\\\"},\\\"splitSizes\\\":[55,45]}}\"}"
+  display_mode: CHART_MODE
+  dynamic_name: Muze Map

@@ -1,0 +1,907 @@
+obj_id: RetailSalesRAD-KPIs-b1a39ddf
+liveboard:
+  name: Retail Sales RAD - KPIs
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales Amount by Region
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending"
+      answer_columns:
+      - name: Region
+      - name: Total Sales Amount
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"70000000\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#747E8C\"},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"Total Sales Amount\"}]}}}],\"axisProperties\": [{\"id\": \"80a5990a-f1ad-404c-aed9-ff0c031a1910\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"dd2c8142-fe5e-425b-98a6-af3ab2f763c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: e869a830-31ff-4435-8dd4-2562b8abe2fa
+  - id: Viz_2
+    answer:
+      name: Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a408bdd4-0fbc-49eb-943e-5a996f57bcbb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"9106b0d3-93d4-420b-8f8e-cdf02ce262f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 8310e56d-2ff1-4543-b6ea-dd40841a9f1e
+  - id: Viz_3
+    answer:
+      name: Total Quantity Purchased by Product Name
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "top 10 by sum [Quantity Purchased] [Product Name]"
+      answer_columns:
+      - name: Product Name
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Product Name
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        ordered_column_ids:
+        - Product Name
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity Purchased\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"#F04152\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"cd4d9b4b-3aed-4cdb-b8c4-9eeb1200cd3e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity Purchased\"],\"isOpposite\": false}},{\"id\": \"1ca86276-5711-4dee-bc3f-c56d6f850097\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 1dacfc20-a589-4263-8fb6-bf6debdfa8cf
+  - id: Viz_4
+    answer:
+      name: Total Quantity Purchased by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Quantity Purchased] [Sales Date] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity Purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c685f746-739d-45e2-a7f2-60cb40043b4d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity Purchased\"],\"isOpposite\": false}},{\"id\": \"2eb36ca4-1373-4333-92c8-e9fac5bd62f3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 7142529f-5bed-4004-85bc-9fbdec1e9f95
+  - id: Viz_5
+    answer:
+      name: Total Sales Amount by State
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [State]"
+      answer_columns:
+      - name: State
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: State
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - State
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: State
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 3.159306771070446,\"extent\": [-1.5239717874782735E7,370904.2216641158,-6391027.049251681,9517471.768054632]},\"chartSpecific\": {\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false},\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\",\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"\\\",\\\"label\\\":{},\\\"value\\\":{}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{},\\\"yAxis\\\":{}},\\\"answerLevelSettings\\\":{\\\"chart\\\":{\\\"backgroundStyle\\\":null},\\\"plotArea\\\":{\\\"backgroundStyle\\\":null},\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"connectingLines\\\":false},\\\"stackLabelStyles\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{}}},\\\"showLabel\\\":true,\\\"showComparison\\\":true,\\\"showSparkline\\\":true,\\\"showAnalyseChangeCta\\\":true,\\\"showAnomalies\\\":null,\\\"customCompare\\\":null}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isLinked\\\":false,\\\"isAxisNameVisible\\\":true}},\\\"labels\\\":{\\\"isLinked\\\":false,\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\"},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"#5E5E5E\\\"}}}\"}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isLinked\\\":false,\\\"isAxisNameVisible\\\":true}},\\\"labels\\\":{\\\"isLinked\\\":false,\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\"},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"#5E5E5E\\\"}}}\"}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 6f5f1cd4-c364-441b-ac80-1296b6dc64fc
+  - id: Viz_6
+    viz_guid: e92dd9e1-8ac8-4722-add7-84d41b144429
+    note_tile:
+      html_parsed_string: <h2 dir="ltr"><span>Overall Commentary</span></h2><ul><li value="1"><span>Lorem ipsum</span></li><li value="2"><span>Lorem ipsum</span></li><li value="3"><span>Lorem ipsum</span></li></ul>
+  - id: Viz_7
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: f13ca8b7-6b02-41ab-bda4-6e98131e5389
+  - id: Viz_8
+    answer:
+      name: Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4d4f5849-b868-46a9-a287-35f4bb22455f
+  - id: Viz_9
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 8139c60c-07f0-4d87-8d92-ad13faf799d7
+  - id: Viz_10
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4c48ac83-ae4a-4e86-a1f3-c8d0f015bfd6
+  - id: Viz_11
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4369a462-ef89-4168-a45b-7de028ee38fd
+  - id: Viz_12
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: d5a724d3-789d-4027-9a13-96e5347e124d
+  - id: Viz_13
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 3cce6d56-9be9-4ec6-8ad9-7284e85b9228
+  - id: Viz_14
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4f5f94c1-fd5d-4b82-bb72-4986572ee7aa
+  - id: Viz_15
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 2035563d-920f-4e52-a71b-123e78c94497
+  - id: Viz_16
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: b372b022-96c8-48a1-803c-25953311391e
+  - id: Viz_17
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: c58e3148-adde-4c4e-87f4-011e57844d5b
+  - id: Viz_18
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 787c6aa1-37e8-437b-a7cc-9df108780846
+  - id: Viz_19
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 25fe70f3-df34-488f-b1c2-c1086b8d407a
+  - id: Viz_20
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security PARAM
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 980d5200-04d6-4ccd-986d-a7a28f3e5623
+  filters:
+  - column:
+    - Product Type
+    oper: in
+    values:
+    - "{null}"
+    - Bags
+    - Dresses
+    - Headwear
+    - Jackets
+    - Jeans
+    - Pants
+    - Shirts
+    - Shorts
+    - Skirts
+    - Socks
+    - Sweaters
+    - Sweatshirts
+    - Swimwear
+    - Underwear
+    - Vests
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 18
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_3
+        x: 0
+        "y": 26
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_5
+        x: 0
+        "y": 10
+        height: 8
+        width: 6
+      - visualization_id: Viz_6
+        x: 0
+        "y": 8
+        height: 2
+        width: 6
+      - visualization_id: Viz_7
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_8
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_9
+        x: 0
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_10
+        x: 9
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_11
+        x: 6
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_12
+        x: 3
+        "y": 4
+        height: 4
+        width: 3
+      id: 75b717da-94b6-42ae-ab93-110c677703fb
+    - name: Tab 2
+      description: ""
+      tiles:
+      - visualization_id: Viz_13
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_14
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_15
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_16
+        x: 0
+        "y": 2
+        height: 4
+        width: 3
+      - visualization_id: Viz_17
+        x: 3
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_18
+        x: 6
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_19
+        x: 9
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_20
+        x: 0
+        "y": 6
+        height: 4
+        width: 3
+      id: 0ea4816b-c28e-4992-a8a3-fd16e86a63bb
+  ordered_chips:
+  - name: Product Type
+    type: FILTER
+  views:
+  - view_guid: eff64e9b-2233-4d50-818a-7e8449f7b88d
+    name: Jackets
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - jackets
+    is_public: true
+  - view_guid: ec5eb688-dbe1-4d0c-9246-7ecb90e93a83
+    name: Bags
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - Bags
+    is_public: true

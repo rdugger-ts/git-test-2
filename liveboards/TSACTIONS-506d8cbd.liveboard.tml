@@ -1,0 +1,91 @@
+obj_id: TSACTIONS-506d8cbd
+liveboard:
+  name: TSACTIONS
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Action Name, Category, Context, Description"
+      tables:
+      - id: TSACTIONS
+        name: TSACTIONS
+        obj_id: TSACTIONS-2000671d
+      search_query: "[Action Name] [Category] [Context] [Description]"
+      answer_columns:
+      - name: Action Name
+      - name: Category
+      - name: Context
+      - name: Description
+      table:
+        table_columns:
+        - column_id: Action Name
+          show_headline: false
+        - column_id: Category
+          show_headline: false
+        - column_id: Context
+          show_headline: false
+        - column_id: Description
+          show_headline: false
+        ordered_column_ids:
+        - Action Name
+        - Category
+        - Context
+        - Description
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Description\",\"width\": 568.1016082763672},{\"columnId\": \"Action Name\",\"width\": 227.0}],\"wrapTableHeader\": true,\"showTableFooter\": true,\"theme\": \"ZEBRA\",\"density\": \"COMPACT\",\"columnProperties\": [{\"columnId\": \"Action Name\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Context\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Action Name
+        - column_id: Category
+        - column_id: Context
+        - column_id: Description
+        axis_configs:
+        - x:
+          - Context
+          "y":
+          - Description
+          category:
+          - Action Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Action Name\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Context\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7ab016ff-ba0a-4866-954b-454985ee0b0c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Description\"],\"isOpposite\": false}},{\"id\": \"d785dfb5-52fa-4544-ba57-61b6cbcff180\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Context\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: dc7805ff-e730-465a-bc2a-660ad7e8f721
+  filters:
+  - column:
+    - Category
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Context
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+  ordered_chips:
+  - name: Category
+    type: FILTER
+  - name: Context
+    type: FILTER
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M

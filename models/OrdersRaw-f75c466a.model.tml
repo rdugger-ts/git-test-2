@@ -1,0 +1,120 @@
+obj_id: OrdersRaw-f75c466a
+model:
+  name: Orders Raw
+  description: This worksheet provides a comprehensive overview of individual sales transactions, including details about the products sold, customer information, and shipping arrangements. It captures essential data such as location, timing, and financial metrics to support analysis of sales performance and customer trends. The worksheet is designed to help stakeholders understand order patterns and identify opportunities for business growth. (AI generated)
+  model_tables:
+  - name: ORDERS
+    obj_id: ORDERS-ab5e691a
+  formulas:
+  - id: formula_Order Month Name
+    name: Order Month Name
+    expr: 'month ( [ORDERS::order_date] ) '
+  columns:
+  - name: Category
+    column_id: ORDERS::category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Order Month Name
+    formula_id: formula_Order Month Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: City
+    column_id: ORDERS::city
+    properties:
+      column_type: ATTRIBUTE
+  - name: Country
+    column_id: ORDERS::country
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer Id
+    column_id: ORDERS::customer_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer Name
+    column_id: ORDERS::customer_name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Discount
+    column_id: ORDERS::discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Order Date
+    column_id: ORDERS::order_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Order Id
+    column_id: ORDERS::order_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Postal Code
+    column_id: ORDERS::postal_code
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Product Id
+    column_id: ORDERS::product_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Name
+    column_id: ORDERS::product_name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Profit
+    column_id: ORDERS::profit
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Quantity
+    column_id: ORDERS::quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Region
+    column_id: ORDERS::region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Row Id
+    column_id: ORDERS::row_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      is_additive: true
+  - name: Sales
+    column_id: ORDERS::sales
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Segment
+    column_id: ORDERS::segment
+    properties:
+      column_type: ATTRIBUTE
+  - name: Ship Date
+    column_id: ORDERS::ship_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Ship Mode
+    column_id: ORDERS::ship_mode
+    properties:
+      column_type: ATTRIBUTE
+  - name: State
+    column_id: ORDERS::state
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sub Category
+    column_id: ORDERS::sub_category
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true

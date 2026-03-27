@@ -1,0 +1,64 @@
+obj_id: AverageCostPerAcquisitionbyRegion-118d6d14
+answer:
+  name: Average Cost Per Acquisition by Region - Muze
+  tables:
+  - id: Web Marketing
+    name: Web Marketing
+    obj_id: WebMarketing_Model
+  search_query: "average [Cost Per Acquisition] by [Campaign Name] sort by average [Cost Per Acquisition] descending [Region] [Date] [Date].monthly [Age Group] [Channel]"
+  answer_columns:
+  - name: Age Group
+  - name: Average Cost Per Acquisition
+    sort_info:
+      category: DEFAULT
+  - name: Campaign Name
+  - name: Channel
+  - name: Month(Date)
+  - name: Region
+  table:
+    table_columns:
+    - column_id: Age Group
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Average Cost Per Acquisition
+      headline_aggregation: TABLE_AGGR
+    - column_id: Campaign Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Channel
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Region
+      headline_aggregation: COUNT_DISTINCT
+    ordered_column_ids:
+    - Campaign Name
+    - Region
+    - Month(Date)
+    - Age Group
+    - Channel
+    - Average Cost Per Acquisition
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Campaign Name\",\"columnProperty\": {}},{\"columnId\": \"Average Cost Per Acquisition\",\"columnProperty\": {}}]}"
+  chart:
+    type: CUSTOM_CHART
+    chart_columns:
+    - column_id: Age Group
+    - column_id: Average Cost Per Acquisition
+    - column_id: Campaign Name
+    - column_id: Channel
+    - column_id: Month(Date)
+    - column_id: Region
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Campaign Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Region\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Average Cost Per Acquisition\",\"columnProperty\": {\"dataLabels\": false}},{\"columnId\": \"Month(Date)\",\"columnProperty\": {\"dataLabels\": false}}],\"axisProperties\": [{\"id\": \"c3670a22-dec7-4369-b8b6-a32f4af618b1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Cost Per Acquisition\"],\"isOpposite\": false}},{\"id\": \"620ca718-ca4a-44cb-ab09-7cfc5b0421f9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Campaign Name\",\"Region\",\"Month(Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Average Cost Per Acquisition\",\"color\": \"#708090\"},{\"serieName\": \"west\",\"color\": \"#899499\"},{\"serieName\": \"southwest\",\"color\": \"#708090\"},{\"serieName\": \"south\",\"color\": \"#36454F\"},{\"serieName\": \"midwest\",\"color\": \"#7393B3\"},{\"serieName\": \"east\",\"color\": \"#B2BEB5\"}],\"systemSeriesColors\": [{\"serieName\": \"Average Cost Per Acquisition\",\"color\": \"#708090\"},{\"serieName\": \"west\",\"color\": \"#899499\"},{\"serieName\": \"southwest\",\"color\": \"#708090\"},{\"serieName\": \"south\",\"color\": \"#36454F\"},{\"serieName\": \"midwest\",\"color\": \"#7393B3\"},{\"serieName\": \"east\",\"color\": \"#B2BEB5\"},{\"serieName\": \"east, jun 2024\",\"color\": \"#721F27\"},{\"serieName\": \"east, jul 2024\",\"color\": \"#F47E89\"},{\"serieName\": \"east, aug 2024\",\"color\": \"#B6313E\"},{\"serieName\": \"east, sep 2024\",\"color\": \"#F9B3B9\"},{\"serieName\": \"east, oct 2024\",\"color\": \"#F04152\"},{\"serieName\": \"east, nov 2024\",\"color\": \"#2F3947\"},{\"serieName\": \"east, dec 2024\",\"color\": \"#A2ACBA\"},{\"serieName\": \"east, jan 2025\",\"color\": \"#47515F\"},{\"serieName\": \"east, feb 2025\",\"color\": \"#BEC6D0\"},{\"serieName\": \"east, mar 2025\",\"color\": \"#747E8C\"},{\"serieName\": \"east, apr 2025\",\"color\": \"#7A3D1F\"},{\"serieName\": \"east, may 2025\",\"color\": \"#FFA97E\"},{\"serieName\": \"east, jun 2025\",\"color\": \"#C26232\"},{\"serieName\": \"east, jul 2025\",\"color\": \"#FFCCB3\"},{\"serieName\": \"midwest, jun 2024\",\"color\": \"#FF8142\"},{\"serieName\": \"midwest, jul 2024\",\"color\": \"#422E75\"},{\"serieName\": \"midwest, aug 2024\",\"color\": \"#B094F8\"},{\"serieName\": \"midwest, sep 2024\",\"color\": \"#6A4ABA\"},{\"serieName\": \"midwest, oct 2024\",\"color\": \"#D1C0FB\"},{\"serieName\": \"midwest, nov 2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"midwest, dec 2024\",\"color\": \"#025B3C\"},{\"serieName\": \"midwest, jan 2025\",\"color\": \"#56D3A8\"},{\"serieName\": \"midwest, feb 2025\",\"color\": \"#049160\"},{\"serieName\": \"midwest, mar 2025\",\"color\": \"#9BE5CB\"},{\"serieName\": \"midwest, apr 2025\",\"color\": \"#06BF7F\"},{\"serieName\": \"midwest, may 2025\",\"color\": \"#785F1A\"},{\"serieName\": \"midwest, jun 2025\",\"color\": \"#FCD977\"},{\"serieName\": \"midwest, jul 2025\",\"color\": \"#BF982A\"},{\"serieName\": \"south, jun 2024\",\"color\": \"#FDE9AF\"},{\"serieName\": \"south, jul 2024\",\"color\": \"#FCC838\"},{\"serieName\": \"south, aug 2024\",\"color\": \"#22636B\"},{\"serieName\": \"south, sep 2024\",\"color\": \"#82DFE9\"},{\"serieName\": \"south, oct 2024\",\"color\": \"#369FAA\"},{\"serieName\": \"south, nov 2024\",\"color\": \"#B5ECF2\"},{\"serieName\": \"south, dec 2024\",\"color\": \"#48D1E0\"},{\"serieName\": \"south, jan 2025\",\"color\": \"#163772\"},{\"serieName\": \"south, feb 2025\",\"color\": \"#71A1F4\"},{\"serieName\": \"south, mar 2025\",\"color\": \"#2359B6\"},{\"serieName\": \"south, apr 2025\",\"color\": \"#ABC7F9\"},{\"serieName\": \"south, may 2025\",\"color\": \"#2E75F0\"},{\"serieName\": \"south, jun 2025\",\"color\": \"#721F27\"},{\"serieName\": \"south, jul 2025\",\"color\": \"#F47E89\"},{\"serieName\": \"southwest, jun 2024\",\"color\": \"#B6313E\"},{\"serieName\": \"southwest, jul 2024\",\"color\": \"#F9B3B9\"},{\"serieName\": \"southwest, aug 2024\",\"color\": \"#F04152\"},{\"serieName\": \"southwest, sep 2024\",\"color\": \"#2F3947\"},{\"serieName\": \"southwest, oct 2024\",\"color\": \"#A2ACBA\"},{\"serieName\": \"southwest, nov 2024\",\"color\": \"#47515F\"},{\"serieName\": \"southwest, dec 2024\",\"color\": \"#BEC6D0\"},{\"serieName\": \"southwest, jan 2025\",\"color\": \"#747E8C\"},{\"serieName\": \"southwest, feb 2025\",\"color\": \"#7A3D1F\"},{\"serieName\": \"southwest, mar 2025\",\"color\": \"#FFA97E\"},{\"serieName\": \"southwest, apr 2025\",\"color\": \"#C26232\"},{\"serieName\": \"southwest, may 2025\",\"color\": \"#FFCCB3\"},{\"serieName\": \"southwest, jun 2025\",\"color\": \"#FF8142\"},{\"serieName\": \"southwest, jul 2025\",\"color\": \"#422E75\"},{\"serieName\": \"west, jun 2024\",\"color\": \"#B094F8\"},{\"serieName\": \"west, jul 2024\",\"color\": \"#6A4ABA\"},{\"serieName\": \"west, aug 2024\",\"color\": \"#D1C0FB\"},{\"serieName\": \"west, sep 2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"west, oct 2024\",\"color\": \"#025B3C\"},{\"serieName\": \"west, nov 2024\",\"color\": \"#56D3A8\"},{\"serieName\": \"west, dec 2024\",\"color\": \"#049160\"},{\"serieName\": \"west, jan 2025\",\"color\": \"#9BE5CB\"},{\"serieName\": \"west, feb 2025\",\"color\": \"#06BF7F\"},{\"serieName\": \"west, mar 2025\",\"color\": \"#785F1A\"},{\"serieName\": \"west, apr 2025\",\"color\": \"#FCD977\"},{\"serieName\": \"west, may 2025\",\"color\": \"#BF982A\"},{\"serieName\": \"west, jun 2025\",\"color\": \"#FDE9AF\"},{\"serieName\": \"west, jul 2025\",\"color\": \"#FCC838\"}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - Campaign Name
+        - Region
+        - Month(Date)
+        - Average Cost Per Acquisition
+    custom_chart_name: Muze Studio (rad)
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"Y29uc3QgeyBtdXplLCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5IH0gPSB2aXo7CmNvbnN0IGh0bWwgPSBtdXplLk9wZXJhdG9ycy5odG1sOwpjb25zdCBkYXRhID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwoKLy8g8J+UjSBEZXZlbG9wZXIgRGVidWcKY29uc3QgeyBzY2hlbWEsIGRhdGE6IHJhd0RhdGEgfSA9IGRhdGEuZ2V0RGF0YSgpOwpjb25zb2xlLmxvZygi4pyFIFNjaGVtYToiLCBzY2hlbWEpOwpjb25zb2xlLmxvZygi4pyFIEZpcnN0IDUgUm93czoiLCByYXdEYXRhLnNsaWNlKDAsIDUpKTsKCi8vIPCflKcgQmFzaWMgQ29uZmlnCmNvbnN0IENPTFVNTlMgPSBbIkF2ZXJhZ2UgQ29zdCBQZXIgQWNxdWlzaXRpb24iLCAiUmVnaW9uIl07CmNvbnN0IFJPV1MgPSBbIkNoYW5uZWwiLCAiQWdlIEdyb3VwIl07CmNvbnN0IENPTE9SX0JZID0gIlJlZ2lvbiI7CmNvbnN0IEVYQ0xVREVEX0ZJRUxEUyA9IFsiX19pZF9fIiwgIk1lYXN1cmUgbmFtZXMiLCAiTWVhc3VyZSB2YWx1ZXMiXTsKCi8vIPCfkqwgVG9vbHRpcCBmb3JtYXR0ZXIgKGNsZWFuIGFuZCBjdXN0b21pemFibGUpCmNvbnN0IGZvcm1hdFRvb2x0aXAgPSAoZGF0YVN0b3JlKSA9PiB7CiAgY29uc3QgZG0gPSBkYXRhU3RvcmUuZGF0YU1vZGVsOwogIGNvbnN0IHsgZGF0YSwgc2NoZW1hIH0gPSBkbS5nZXREYXRhKCk7CgogIGxldCBodG1sU3RyID0gYDxkaXYgY2xhc3M9InRzLXRvb2x0aXAiPmA7CgogIGRhdGFbMF0uZm9yRWFjaCgodmFsLCBpKSA9PiB7CiAgICBjb25zdCBsYWJlbCA9IHNjaGVtYVtpXT8ubmFtZTsKICAgIGlmICghRVhDTFVERURfRklFTERTLmluY2x1ZGVzKGxhYmVsKSkgewogICAgICBodG1sU3RyICs9IGAKICAgICAgICA8ZGl2IGNsYXNzPSJ0cy10b29sdGlwLXJvdyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0idHMtdG9vbHRpcC1sYWJlbCI+JHtsYWJlbH08L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0idHMtdG9vbHRpcC12YWx1ZSI+JHt2YWx9PC9zcGFuPgogICAgICAgIDwvZGl2PmA7CiAgICB9CiAgfSk7CgogIGh0bWxTdHIgKz0gYDwvZGl2PmA7CiAgcmV0dXJuIGh0bWwoW2h0bWxTdHJdKTsKfTsKCi8vIPCfk4ogUmVuZGVyIENoYXJ0Cm11emUKICAuY2FudmFzKCkKICAuY29sdW1ucyhDT0xVTU5TKQogIC5yb3dzKFJPV1MpCiAgLmxheWVycyhbCiAgICB7CiAgICAgIG1hcms6ICJiYXIiLAogICAgICBlbmNvZGluZzogeyBjb2xvcjogQ09MT1JfQlkgfSwKICAgIH0sCiAgXSkKICAuY29uZmlnKHsKICAgIGludGVyYWN0aW9uOiB7CiAgICAgIHRvb2x0aXA6IHsKICAgICAgICBmb3JtYXR0ZXI6IGZvcm1hdFRvb2x0aXAsCiAgICAgIH0sCiAgICB9LAogICAgYm9yZGVyOiB7CiAgICAgIHNob3dSb3dCb3JkZXJzOiBmYWxzZSwKICAgICAgc2hvd0NvbEJvcmRlcnM6IGZhbHNlLAogICAgICBzaG93VmFsdWVCb3JkZXJzOiB7IHRvcDogZmFsc2UsIGJvdHRvbTogdHJ1ZSwgbGVmdDogdHJ1ZSwgcmlnaHQ6IGZhbHNlIH0sCiAgICB9LAogICAgcm93czogewogICAgICBmYWNldHM6IHsgc2hvdzogdHJ1ZSB9LAogICAgICBoZWFkZXJzOiB7IHNob3c6IHRydWUgfSwKICAgIH0sCiAgICBncmlkTGluZXM6IHsKICAgICAgeDogeyBzaG93OiBmYWxzZSB9LAogICAgICB5OiB7IHNob3c6IGZhbHNlIH0sCiAgICB9LAogICAgYXhlczogewogICAgICB4OiB7CiAgICAgICAgc2hvd0F4aXNOYW1lOiBmYWxzZSwKICAgICAgICB0aWNrSW50ZXJ2YWw6IHsgc3RlcDogQ09MT1JfQlkgfSwKICAgICAgfSwKICAgIH0sCiAgICBsZWdlbmQ6IHsKICAgICAgY29sb3I6IHsKICAgICAgICByYW5nZTogWyIjQjJCRUI1IiwgIiM3MzkzQjMiLCAiIzM2NDU0RiIsICIjNzA4MDkwIiwgIiM4OTk0OTkiXSwKICAgICAgICBwb3NpdGlvbjogInRvcCIsCiAgICAgIH0sCiAgICB9LAogICAgdW5pZm9ybUF4aXNEb21haW5zOiBmYWxzZSwKICB9KQogIC5kYXRhKGRhdGEpCiAgLm1vdW50KCIjY2hhcnQiKTsK\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQoKLnRzLXRvb2x0aXAgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsgICAgICAgICAgICAgICAgLyogY3JpdGljYWw6IG11c3QgZmxvYXQgYWJvdmUgY2FudmFzICovCiAgei1pbmRleDogOTk5OTsgICAgICAgICAgICAgICAgICAgICAvKiBlbnN1cmUgaXQncyBhYm92ZSBjaGFydCBsYXllcnMgKi8KICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODUpOyAgLyogc2VtaS10cmFuc3BhcmVudCBibGFjayAqLwogIGNvbG9yOiB3aGl0ZTsKICBwYWRkaW5nOiAxMnB4IDE2cHg7CiAgYm9yZGVyLXJhZGl1czogNnB4OwogIHBvaW50ZXItZXZlbnRzOiBub25lOwogIGZvbnQtZmFtaWx5OiAiUm9ib3RvIiwgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDEzcHg7CiAgbWF4LXdpZHRoOiAyNjBweDsKICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoMnB4KTsgICAgICAgLyogb3B0aW9uYWwgZnJvc3RlZC1nbGFzcyBlZmZlY3QgKi8KfQoKLnRzLXRvb2x0aXAtcm93IHsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICBtYXJnaW4tYm90dG9tOiA2cHg7Cn0KCi50cy10b29sdGlwLWxhYmVsIHsKICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjcpOwp9CgoudHMtdG9vbHRpcC12YWx1ZSB7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBjb2xvcjogI2ZmZjsKfQo\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[55,45]}}\"}"
+  display_mode: CHART_MODE
+  dynamic_name: Average Cost Per Acquisition by Region - Muze

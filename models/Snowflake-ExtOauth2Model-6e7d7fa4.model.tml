@@ -1,0 +1,33 @@
+obj_id: Snowflake-ExtOauth2Model-6e7d7fa4
+model:
+  name: Snowflake - Ext Oauth2 Model
+  model_tables:
+  - name: SALES_FACT
+    obj_id: SALES_FACT-8ed2a404
+  columns:
+  - name: Amount
+    column_id: SALES_FACT::AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Region
+    column_id: SALES_FACT::REGION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Sale Date
+    column_id: SALES_FACT::SALE_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Store Id
+    column_id: SALES_FACT::STORE_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: false

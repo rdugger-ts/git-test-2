@@ -1,0 +1,28 @@
+obj_id: UniqueCountId-b1cdc949
+answer:
+  name: Unique Count Id
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "unique count [Id]"
+  answer_columns:
+  - name: Unique Number of Id
+  table:
+    table_columns:
+    - column_id: Unique Number of Id
+      show_headline: false
+    ordered_column_ids:
+    - Unique Number of Id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Unique Number of Id
+    axis_configs:
+    - "y":
+      - Unique Number of Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Unique Number of Id\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"97126aa2-ed3f-47c7-a6ce-be42e6e48f6a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Id\"],\"isOpposite\": false}},{\"id\": \"a5d417d0-8754-441e-8e88-695ac4414fa8\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
