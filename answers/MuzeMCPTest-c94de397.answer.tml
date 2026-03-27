@@ -1,0 +1,51 @@
+obj_id: MuzeMCPTest-c94de397
+answer:
+  name: Muze MCP Test
+  tables:
+  - id: Orders Raw
+    name: Orders Raw
+    obj_id: OrdersRaw-f75c466a
+  search_query: "[Order Date] [Order Date].monthly [Region] [Sales] [Segment]"
+  answer_columns:
+  - name: Month(Order Date)
+  - name: Region
+  - name: Segment
+  - name: Total Sales
+  table:
+    table_columns:
+    - column_id: Month(Order Date)
+      show_headline: false
+    - column_id: Region
+      show_headline: false
+    - column_id: Segment
+      show_headline: false
+    - column_id: Total Sales
+      show_headline: false
+    ordered_column_ids:
+    - Month(Order Date)
+    - Region
+    - Segment
+    - Total Sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: MUZE_STUDIO
+    chart_columns:
+    - column_id: Month(Order Date)
+    - column_id: Region
+    - column_id: Segment
+    - column_id: Total Sales
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9c2b9df8-2b08-4eb4-9254-a10b5a13c7be\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"fa2a0c0a-b156-4a67-bb34-f049cfb84875\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\",\"Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - Month(Order Date)
+        - Region
+        - Total Sales
+        mode: COLUMN_DRIVEN
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"LyoqCiAqIEF2YWlsYWJsZSBDb2x1bW5zOgogKiAiTW9udGgoT3JkZXIgRGF0ZSkiCiAqICJSZWdpb24iCiAqICJUb3RhbCBTYWxlcyIKICogIk1lYXN1cmUgbmFtZXMiIC8vIElmICdtZWFzdXJlVmFsdWVzJyBpcyBlbmFibGVkLgogKiAiTWVhc3VyZSB2YWx1ZXMiIC8vIElmICdtZWFzdXJlVmFsdWVzJyBpcyBlbmFibGVkLgogKiAtLS0gRU5EIC0tLSAKICovCgpjb25zdCB7CiAgICBtdXplLAogICAgZ2V0RGF0YUZyb21TZWFyY2hRdWVyeQp9ID0gdml6OwogIApjb25zdCBkYXRhID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwoKbXV6ZS5jYW52YXMoKQoucm93cyhbIlRvdGFsIFNhbGVzIl0pCi5jb2x1bW5zKFsiTW9udGgoT3JkZXIgRGF0ZSkiXSkKLmRhdGEoZGF0YSkKLm1vdW50KCIjY2hhcnQiKTsK\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ\\u003d\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[55,45]}}\",\"axisVisualProps\":{},\"columnVisualProps\":{},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{},\"legendVisualProps\":{},\"displayVisualProps\":{}}"
+  display_mode: CHART_MODE
+  dynamic_name: Muze MCP Test

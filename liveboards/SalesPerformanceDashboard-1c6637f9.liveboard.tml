@@ -1,0 +1,186 @@
+obj_id: SalesPerformanceDashboard-1c6637f9
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: aa844c7d-9495-4741-ae5f-bb5d8257d1e9
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center;\"><span style=\"white-space: pre-wrap;\">📊 Sales Performance Dashboard</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin: 15px; line-height: 1.6;\"><span style=\"white-space: pre-wrap; color: #2c3e50;\"><strong>📈 Analysis Summary:</strong><br><br>This dashboard provides comprehensive insights into sales performance across time series KPIs and regional store metrics:<br><br>🕐 <strong>Time Series KPIs:</strong><br>• Daily sales trends showing consistent performance around $800K daily<br>• Regional sales evolution over time with West region leading performance<br><br>🏪 <strong>Regional Store Performance:</strong><br>• West region dominates with $335.9M in total sales<br>• Midwest ($224.7M), East ($252.4M), Southwest ($116.7M), and South ($41M) follow<br>• Top performing stores include Montana (59718) at $62.9M and Nevada locations<br><br>💡 <strong>Key Insights:</strong><br>• West region consistently outperforms other regions<br>• Store performance varies significantly within regions<br>• Sales trends show seasonal patterns and growth opportunities<br><br><em style=\"font-size: 0.9em; color: #7f8c8d;\">Generated on March 26, 2026 22:41 UTC</em></span></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: Show total sales over time as a time series.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].daily"
+      answer_columns:
+      - name: Day(date)
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Day(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day(date)
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(date)
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Day(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Day(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9951e28a-c05c-459d-bfa7-2f56b24975a4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"43d097af-1853-4f15-aa5e-b66bb7cfc4e8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8377d72c-b83d-457b-b3a3-936e0c49dd9c
+  - id: Viz_3
+    answer:
+      name: Show total sales over time by region.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date] [date].monthly [region]"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Month(date)
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"92a8028f-0464-47db-be12-316a094466b3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"beb5f665-c8c4-4f37-be43-a654594cbb0f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: b4a3e354-e2bb-4927-b777-065b5ea59fd4
+  - id: Viz_4
+    answer:
+      name: Show total sales by region.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"84a7635b-8c5c-4af7-8421-c382918192fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"01949c05-bcc6-451f-b31c-28872adff3d8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: fd7721e8-16d2-4ff2-b36a-43e58d31f03d
+  - id: Viz_5
+    answer:
+      name: Show total sales by store.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [store]"
+      answer_columns:
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"be074207-d756-443e-bda4-968b88f738e4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"7111e3e2-e0f6-4e57-9141-cef7316b428b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 04057f17-3c05-488e-9d0e-193695130273
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

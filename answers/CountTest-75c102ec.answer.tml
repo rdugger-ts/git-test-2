@@ -1,0 +1,35 @@
+obj_id: CountTest-75c102ec
+answer:
+  name: Count Test
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "[Account Id] [Account Name]"
+  answer_columns:
+  - name: Account Id
+  - name: Account Name
+  table:
+    table_columns:
+    - column_id: Account Id
+      show_headline: false
+    - column_id: Account Name
+      show_headline: false
+    ordered_column_ids:
+    - Account Id
+    - Account Name
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: Account Id
+    - column_id: Account Name
+    axis_configs:
+    - x:
+      - Account Name
+      "y":
+      - Account Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2c593233-1034-4e24-87f1-8bd33ba834e2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Id\"],\"isOpposite\": false}},{\"id\": \"d78e450e-97c9-47e5-bfc9-a5fd4f637753\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account Name\"]}}]}"
+  display_mode: TABLE_MODE

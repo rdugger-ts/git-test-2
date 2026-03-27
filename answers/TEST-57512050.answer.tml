@@ -1,0 +1,38 @@
+obj_id: TEST-57512050
+answer:
+  name: TEST
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "[Amount] [Name] sort by [Amount] descending"
+  answer_columns:
+  - name: Name
+  - name: Total Amount
+    sort_info:
+      category: DEFAULT
+  table:
+    table_columns:
+    - column_id: Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Amount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Name
+    - Total Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: BAR
+    chart_columns:
+    - column_id: Name
+    - column_id: Total Amount
+    axis_configs:
+    - x:
+      - Name
+      "y":
+      - Total Amount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Name\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Amount\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"819bd6af-64bc-49b2-93e5-4573ffaf7407\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"c868ca62-d834-4dde-aae9-fbc8fbdbb276\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  dynamic_name: TEST

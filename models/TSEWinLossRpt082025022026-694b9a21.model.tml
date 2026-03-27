@@ -1,0 +1,149 @@
+obj_id: TSEWinLossRpt082025022026-694b9a21
+model:
+  name: TSE Win Loss Rpt 082025 022026
+  description: This worksheet provides a comprehensive overview of sales opportunities, including details about the accounts, products sold, and the sales process. It captures essential information such as industry, deal value, competitive landscape, and key actions taken by the sales team. Additionally, it tracks reasons for lost or downsized opportunities, helping to identify trends and areas for improvement. (AI generated)
+  model_tables:
+  - name: H2FY26_TSE_WinsLosses
+    obj_id: H2FY26_TSE_WinsLosses-bf0fab7c
+  columns:
+  - name: Account Industry
+    column_id: H2FY26_TSE_WinsLosses::Account Industry
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Name
+    column_id: H2FY26_TSE_WinsLosses::Account Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Owner
+    column_id: H2FY26_TSE_WinsLosses::Account Owner
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Product Edition(s) Sold
+    column_id: H2FY26_TSE_WinsLosses::Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Account Product Offering(s) Sold
+    column_id: H2FY26_TSE_WinsLosses::Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Bva Next Steps
+    column_id: H2FY26_TSE_WinsLosses::BVA Next Steps
+    properties:
+      column_type: ATTRIBUTE
+  - name: Close Date
+    column_id: H2FY26_TSE_WinsLosses::Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+  - name: Competitors
+    column_id: H2FY26_TSE_WinsLosses::Competitors
+    properties:
+      column_type: ATTRIBUTE
+  - name: Confirmed Cloud Data Warehouse
+    column_id: H2FY26_TSE_WinsLosses::Confirmed Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+  - name: Created Date
+    column_id: H2FY26_TSE_WinsLosses::Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+  - name: Cs Next Step
+    column_id: H2FY26_TSE_WinsLosses::CS Next Step
+    properties:
+      column_type: ATTRIBUTE
+  - name: Mode Next Steps (csm Notes)
+    column_id: H2FY26_TSE_WinsLosses::Mode Next Steps (CSM Notes)
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Deployment Forecast
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Disqualified/downsell Reason
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Dq/downsell Comment
+    column_id: H2FY26_TSE_WinsLosses::Opportunity DQ/Downsell Comment
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Id
+    column_id: H2FY26_TSE_WinsLosses::Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Name
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Net Acv
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Opportunity Net Acv Currency
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Presale Notes
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Prior Stage
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Prior Stage
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Product Category
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Product Type
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Region
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Opportunity Type
+    column_id: H2FY26_TSE_WinsLosses::Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: 'Opportunity: Tse Specialist Notes'
+    column_id: 'H2FY26_TSE_WinsLosses::Opportunity: TSE Specialist Notes'
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Edition (s) Sold
+    column_id: H2FY26_TSE_WinsLosses::Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sdr Next Step
+    column_id: H2FY26_TSE_WinsLosses::SDR Next Step
+    properties:
+      column_type: ATTRIBUTE
+  - name: Secondary Loss/downsell Reason
+    column_id: H2FY26_TSE_WinsLosses::Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+  - name: Stage
+    column_id: H2FY26_TSE_WinsLosses::Stage
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tcv
+    column_id: H2FY26_TSE_WinsLosses::TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Tcv Currency
+    column_id: H2FY26_TSE_WinsLosses::TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true

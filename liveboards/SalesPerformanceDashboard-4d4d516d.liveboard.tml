@@ -1,0 +1,217 @@
+obj_id: SalesPerformanceDashboard-4d4d516d
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: 0c599926-4cfe-409c-9128-2243d3570b20
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #1F4E79; margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">📊 Sales Performance Analytics Dashboard</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"padding: 15px; background-color: #f8f9fa; border-radius: 8px; line-height: 1.6;\"><span style=\"white-space: pre-wrap; color: #333;\">🕒 <strong>Generated on March 26, 2026 22:38 UTC</strong><br><br>📈 <strong style=\"color: #28a745;\">Key Performance Insights:</strong><br>• Two comprehensive time series KPIs tracking monthly sales performance across all stores and by region<br>• Regional performance breakdown showing West and East regions as top performers with $67M+ and $60M+ respectively<br>• Store ranking analysis reveals Nevada (89145) as the #1 performing store with $67.3M in total sales<br>• Complete store performance metrics within each region for strategic decision making<br><br>🎯 <strong style=\"color: #17a2b8;\">Analysis Coverage:</strong><br>• Monthly sales trends from 2020-2026 across all regions<br>• Regional sales distribution: West, East, Midwest, Southwest, and South<br>• Individual store performance rankings within regional context<br>• Total sales aggregations for comprehensive business insights</span></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: Show total sales as a time series KPI (monthly) for all stores.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly [store]"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Month(date)
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"24b03785-7da3-419b-a45d-ead88af48fda\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"01a4f5df-8be6-4bda-b385-ac673d11d454\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 70d2f7b1-fcde-4e8b-8701-8f6849698742
+  - id: Viz_3
+    answer:
+      name: Show total sales as a time series KPI (monthly) for each region.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly [region]"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Month(date)
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d143b579-e4fe-479d-935d-03942ae65e9b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"6d6b6796-aa33-467a-8db7-e7761a362935\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: f54ceffc-3ec4-44a5-8c23-98c14db9a950
+  - id: Viz_4
+    answer:
+      name: What are the total sales by store within each region?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region] [store]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: store
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b031eab4-5880-42f9-a087-2fe254bb1337\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"b8162f76-13fb-44cd-be6d-20f2e5a1857a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: e593d2b5-e9a4-483c-bee2-025007cab58d
+  - id: Viz_5
+    answer:
+      name: How do stores rank within each region based on total sales?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula_store rank within region
+        name: store rank within region
+        expr: "rank ( [formula_store sales] , 'desc' )"
+        was_auto_generated: false
+      - id: formula_store sales
+        name: store sales
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) )"
+        was_auto_generated: false
+      search_query: "[sales] [formula_store rank within region] [region] [store]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: store
+      - name: store rank within region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: store rank within region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - store
+        - store rank within region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"store rank within region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: store
+        - column_id: store rank within region
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"store rank within region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"106fcec2-84c7-4e76-b812-ed2fac97f132\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"f673264e-e7c3-4b09-9f8e-c203890333db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 75f34e5e-a0c5-45b9-bbfe-e80ae04d00c0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

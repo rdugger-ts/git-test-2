@@ -1,0 +1,34 @@
+obj_id: TotalWon-c5de6813
+answer:
+  name: Copy of Total Won
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "count [Id]"
+  answer_columns:
+  - name: Number of Id
+  table:
+    table_columns:
+    - column_id: Number of Id
+      show_headline: false
+    ordered_column_ids:
+    - Number of Id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: MUZE_STUDIO
+    chart_columns:
+    - column_id: Number of Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Number of Id\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"c7cde195-60dd-45b9-a490-a9dd89eb9691\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Id\"],\"isOpposite\": false}},{\"id\": \"893d5ef8-db89-4553-bc8c-98063c93ab54\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#FCC838\"}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - Number of Id
+        mode: COLUMN_DRIVEN
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"LyoqCiAqIEF2YWlsYWJsZSBDb2x1bW5zOgogKiAiTnVtYmVyIG9mIElkIgogKiAiTWVhc3VyZSBuYW1lcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqICJNZWFzdXJlIHZhbHVlcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqIC0tLSBFTkQgLS0tIAogKi8KCmNvbnN0IHsgZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSB9ID0gdml6OwoKLy9yZXVzZSB0aGlzIGFjcm9zcyBhbnkgS1BJIHRpbGUgYW5kIGFkanVzdCB2YWx1ZSA9IHJhdy5kYXRhPy5bMF0/LlswXSAKLy90byBwdWxsIGZyb20gb3RoZXIgY29sdW1ucyBvciByb3dzIGFzIG5lZWRlZAoKdHJ5IHsKICBjb25zdCB0c0RhdGFNb2RlbCA9IGdldERhdGFGcm9tU2VhcmNoUXVlcnkoKTsKICBjb25zdCByYXcgPSB0c0RhdGFNb2RlbC5nZXREYXRhKCk7CgogIC8vIPCflI0gRGVidWcgbG9nZ2luZwogIGNvbnNvbGUubG9nKCJGdWxsIERhdGFNb2RlbCBvYmplY3Q6IiwgdHNEYXRhTW9kZWwpOwogIGNvbnNvbGUubG9nKCJSYXcgZGF0YSBhcnJheToiLCByYXcuZGF0YSk7CiAgY29uc29sZS5sb2coIlNjaGVtYSBkZWZpbml0aW9uOiIsIHJhdy5zY2hlbWEpOwoKICBjb25zdCB2YWx1ZSA9IHJhdy5kYXRhPy5bMF0/LlswXTsKCiAgaWYgKHR5cGVvZiB2YWx1ZSAhPT0gIm51bWJlciIpIHsKICAgIHRocm93IG5ldyBFcnJvcigiTm8gbnVtZXJpYyB2YWx1ZSBmb3VuZCBpbiB0aGUgZmlyc3QgY29sdW1uIik7CiAgfQoKICBjb25zdCBmb3JtYXR0ZWQgPSB2YWx1ZS50b0xvY2FsZVN0cmluZygpOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJrcGktdmFsdWUiKS50ZXh0Q29udGVudCA9IGZvcm1hdHRlZDsKCiAgY29uc29sZS5sb2coYFJlbmRlcmVkIEtQSSB2YWx1ZTogJHtmb3JtYXR0ZWR9YCk7Cn0gY2F0Y2ggKGVycikgewogIGNvbnNvbGUuZXJyb3IoIkZhaWxlZCB0byBkaXNwbGF5IEtQSToiLCBlcnIpOwp9Cgp2aXouZXZlbnRzLmVtaXRSZW5kZXJDb21wbGV0ZWRFdmVudCgpOw\\u003d\\u003d\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ\\u003d\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPgogIDxkaXYgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsgcGFkZGluZzogMjBweDsgaGVpZ2h0OiAxMDAlOyBib3gtc2l6aW5nOiBib3JkZXItYm94OyI+CiAgICA8ZGl2IGlkPSJrcGktdmFsdWUiIHN0eWxlPSJmb250LXNpemU6IDcycHg7IGZvbnQtd2VpZ2h0OiBib2xkOyI+Li4uPC9kaXY+CiAgICA8ZGl2IHN0eWxlPSJmb250LXNpemU6IDE2cHg7IGNvbG9yOiByZWQ7Ij5Ub3RhbCBXb248L2Rpdj4KICA8L2Rpdj4KPC9kaXY+Cg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[55,45],\\\"editorConsoleSplitSizes\\\":[99,1]}}\",\"axisVisualProps\":{},\"columnVisualProps\":{},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{},\"legendVisualProps\":{},\"displayVisualProps\":{}}"
+  display_mode: CHART_MODE
+  dynamic_name: Copy of Total Won

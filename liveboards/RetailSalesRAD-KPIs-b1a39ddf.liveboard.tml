@@ -193,7 +193,7 @@ liveboard:
           "y":
           - Total Sales Amount
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.652779600649687,\"extent\": [-1.5239717874782735E7,2940654.9885434797,-6391027.049251681,6947721.001175269]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"multiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#a6d2ff\",\"#3873c1\"]}]}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 3.159306771070446,\"extent\": [-1.5239717874782735E7,370904.2216641158,-6391027.049251681,9517471.768054632]},\"chartSpecific\": {\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false},\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\",\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"\\\",\\\"label\\\":{},\\\"value\\\":{}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{},\\\"yAxis\\\":{}},\\\"answerLevelSettings\\\":{\\\"chart\\\":{\\\"backgroundStyle\\\":null},\\\"plotArea\\\":{\\\"backgroundStyle\\\":null},\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"connectingLines\\\":false},\\\"stackLabelStyles\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{}}},\\\"showLabel\\\":true,\\\"showComparison\\\":true,\\\"showSparkline\\\":true,\\\"showAnalyseChangeCta\\\":true,\\\"showAnomalies\\\":null,\\\"customCompare\\\":null}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isLinked\\\":false,\\\"isAxisNameVisible\\\":true}},\\\"labels\\\":{\\\"isLinked\\\":false,\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\"},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"#5E5E5E\\\"}}}\"}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isLinked\\\":false,\\\"isAxisNameVisible\\\":true}},\\\"labels\\\":{\\\"isLinked\\\":false,\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"\\\"},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"#5E5E5E\\\"}}}\"}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
       display_mode: CHART_MODE
       parameter_values:
       - key: Data Security PARAM
@@ -883,16 +883,9 @@ liveboard:
         height: 4
         width: 3
       id: 0ea4816b-c28e-4992-a8a3-fd16e86a63bb
-  parameter_overrides:
-  - key: b8c424dd-a897-49be-b460-8feaa2a7d27d
-    value:
-      name: Retail Sales WS::Data Security PARAM
-      override_value: abgdezetiklmnzoprstupcpos
   ordered_chips:
   - name: Product Type
     type: FILTER
-  - name: Retail Sales WS::Data Security PARAM
-    type: PARAMETER
   views:
   - view_guid: eff64e9b-2233-4d50-818a-7e8449f7b88d
     name: Jackets
@@ -903,10 +896,6 @@ liveboard:
       values:
       - jackets
     is_public: true
-    view_parameters:
-    - name: Retail Sales WS::Data Security
-      id: b8c424dd-a897-49be-b460-8feaa2a7d27d
-      override_value: abgdezetiklmnzoprstupcpos
   - view_guid: ec5eb688-dbe1-4d0c-9246-7ecb90e93a83
     name: Bags
     view_filters:
@@ -916,7 +905,3 @@ liveboard:
       values:
       - Bags
     is_public: true
-    view_parameters:
-    - name: Retail Sales WS::Data Security
-      id: b8c424dd-a897-49be-b460-8feaa2a7d27d
-      override_value: abgdezetiklmnzoprstupcpos

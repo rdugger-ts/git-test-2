@@ -1,0 +1,53 @@
+obj_id: TotalSalesAmountbyRegion-1ae58687
+answer:
+  name: Bar and Tick
+  tables:
+  - id: Retail Sales WS
+    name: Retail Sales WS
+    obj_id: RetailSalesWS-9b1deb72
+  formulas:
+  - id: formula__salesQty
+    name: _salesQty
+    expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+    was_auto_generated: false
+  search_query: "sum [Sales Amount] [Region] [Sales Date] [Sales Date].detailed"
+  answer_columns:
+  - name: Region
+  - name: Sales Date
+  - name: Total Sales Amount
+  table:
+    table_columns:
+    - column_id: Region
+      show_headline: false
+    - column_id: Sales Date
+      show_headline: false
+    - column_id: Total Sales Amount
+      show_headline: false
+    ordered_column_ids:
+    - Region
+    - Sales Date
+    - Total Sales Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: CUSTOM_CHART
+    chart_columns:
+    - column_id: Region
+    - column_id: Sales Date
+    - column_id: Total Sales Amount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"70000000\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#747E8C\"},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"Total Sales Amount\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Region\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"foo\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}},{\"columnId\": \"Sales Date\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"80dc7f8c-5c5b-420e-8976-2c79debf9978\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"87586814-916e-4f9e-b7e6-ef20743d6e68\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\",\"Sales Date\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"},{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - Region
+        - Sales Date
+        - Total Sales Amount
+    custom_chart_name: Muze Studio (rad)
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"Y29uc3QgeyBtdXplLCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5IH0gPSB2aXo7CmNvbnN0IGRhdGEgPSBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5KCk7CgoKY29uc3QgcmF3ID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwpjb25zdCByb3dzID0gcmF3LmdldERhdGEoKS5kYXRhOwpjb25zdCBqc29uRGF0YSA9IHJhdy5nZXREYXRhKCk7CgoKY29uc29sZS5sb2coIuKchSBTY2hlbWE6IiwganNvbkRhdGEuc2NoZW1hKTsKY29uc29sZS5sb2coIuKchSBTYW1wbGUgRGF0YToiLCBqc29uRGF0YS5kYXRhLnNsaWNlKDAsIDUpKTsgLy8gdmlldyBmaXJzdCA1IHJvd3MKCm11emUuY2FudmFzKCkKLnJvd3MoWyJUb3RhbCBTYWxlcyBBbW91bnQiXSkKLmNvbHVtbnMoWyJSZWdpb24iXSkKLmRhdGEoZGF0YSkKLm1vdW50KCIjY2hhcnQiKQo\\u003d\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ\\u003d\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[55,45]}}\"}"
+  display_mode: CHART_MODE
+  parameter_values:
+  - key: Data Security PARAM
+    value: abgdezetiklmnzoprstupcpos

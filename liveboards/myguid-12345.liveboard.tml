@@ -1,0 +1,34 @@
+obj_id: myguid-12345
+liveboard:
+  name: SF TSALES Event Test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Event Id
+      tables:
+      - id: TSALES Events
+        name: TSALES Events
+        obj_id: TSALESEvents-0bc80db2
+      search_query: "[Event Id]"
+      answer_columns:
+      - name: Event Id
+      table:
+        table_columns:
+        - column_id: Event Id
+          show_headline: false
+        ordered_column_ids:
+        - Event Id
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Event Id
+        axis_configs:
+        - "y":
+          - Event Id
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: dc90d8ab-5537-4050-aa76-bf9db31fa704
+  layout:
+    tiles:
+    - visualization_id: Viz_1

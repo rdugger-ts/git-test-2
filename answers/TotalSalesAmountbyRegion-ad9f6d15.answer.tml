@@ -1,0 +1,50 @@
+obj_id: TotalSalesAmountbyRegion-ad9f6d15
+answer:
+  name: Copy of Total Sales Amount by Region State
+  tables:
+  - id: Retail Sales WS
+    name: Retail Sales WS
+    obj_id: RetailSalesWS-9b1deb72
+  formulas:
+  - id: formula__salesQty
+    name: _salesQty
+    expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+    was_auto_generated: false
+  search_query: "sum [Sales Amount] [Region] [State] [Region].south [State].arizona [State].Georgia"
+  answer_columns:
+  - name: Region
+  - name: State
+  - name: Total Sales Amount
+  table:
+    table_columns:
+    - column_id: Region
+      show_headline: false
+    - column_id: State
+      show_headline: false
+    - column_id: Total Sales Amount
+      show_headline: false
+    ordered_column_ids:
+    - Region
+    - State
+    - Total Sales Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: BAR
+    chart_columns:
+    - column_id: Region
+    - column_id: State
+    - column_id: Total Sales Amount
+    axis_configs:
+    - x:
+      - State
+      "y":
+      - Total Sales Amount
+      color:
+      - Region
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"70000000\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#747E8C\"},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"Total Sales Amount\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Region\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"foo\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}},{\"columnId\": \"State\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ebcfd8a9-84a8-4faf-8769-8b9200c202d7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"906f7869-489e-404c-b34f-4ee510ae715f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"},{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"},{\"serieName\": \"south\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  parameter_values:
+  - key: Data Security PARAM
+    value: abgdezetiklmnzoprstupcpos

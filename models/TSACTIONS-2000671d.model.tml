@@ -1,0 +1,32 @@
+obj_id: TSACTIONS-2000671d
+model:
+  name: TSACTIONS
+  model_tables:
+  - name: TSACTIONS
+    obj_id: TSACTIONS-99f33fa1
+  columns:
+  - name: Action Name
+    column_id: TSACTIONS::ACTION_NAME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Category
+    column_id: TSACTIONS::CATEGORY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Context
+    column_id: TSACTIONS::CONTEXT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Description
+    column_id: TSACTIONS::DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true

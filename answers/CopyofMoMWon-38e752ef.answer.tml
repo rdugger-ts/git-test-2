@@ -1,0 +1,74 @@
+obj_id: CopyofMoMWon-38e752ef
+answer:
+  name: Copy of MoM Won
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "[Account Name] [Account Type] [Stagename] [Forecastcategory] [Closedate] [Closedate].monthly [Type] [Name] [Account Id] count [Stagename] = 'closed won'"
+  answer_columns:
+  - name: Account Id
+  - name: Account Name
+  - name: Account Type
+  - name: Forecastcategory
+  - name: Month(Closedate)
+  - name: Name
+  - name: Number of Stagename
+  - name: Stagename
+  - name: Type
+  table:
+    table_columns:
+    - column_id: Account Id
+      show_headline: false
+    - column_id: Account Name
+      show_headline: false
+    - column_id: Account Type
+      show_headline: false
+    - column_id: Forecastcategory
+      show_headline: false
+    - column_id: Month(Closedate)
+      show_headline: false
+    - column_id: Name
+      show_headline: false
+    - column_id: Number of Stagename
+      show_headline: false
+    - column_id: Stagename
+      show_headline: false
+    - column_id: Type
+      show_headline: false
+    ordered_column_ids:
+    - Account Name
+    - Account Type
+    - Stagename
+    - Forecastcategory
+    - Month(Closedate)
+    - Type
+    - Name
+    - Account Id
+    - Number of Stagename
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Account Id\",\"width\": 192.0}],\"orderedColumnIds\": [\"Account Name\",\"Account Id\",\"Account Type\",\"Stagename\",\"Forecastcategory\",\"Month(Closedate)\",\"Type\",\"Name\"]}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Account Id
+    - column_id: Account Name
+    - column_id: Account Type
+    - column_id: Forecastcategory
+    - column_id: Month(Closedate)
+    - column_id: Name
+    - column_id: Number of Stagename
+    - column_id: Stagename
+    - column_id: Type
+    axis_configs:
+    - x:
+      - Month(Closedate)
+      "y":
+      - Number of Stagename
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Number of Stagename\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7ea89558-bfe0-4578-8755-1052f45285bc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Stagename\"],\"isOpposite\": false}},{\"id\": \"045cb65a-5c37-4a98-9549-c949a23701a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Closedate)\"]}}],\"seriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#163772\"},{\"serieName\": \"Number of Stagename\",\"color\": \"#163772\"}],\"systemSeriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#163772\"},{\"serieName\": \"Number of Stagename\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
+  action_object_associations:
+  - action_name: Send to Slack
+    context: MENU
+    enabled: true

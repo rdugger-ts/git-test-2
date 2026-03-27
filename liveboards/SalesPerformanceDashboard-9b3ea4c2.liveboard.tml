@@ -1,0 +1,184 @@
+obj_id: SalesPerformanceDashboard-9b3ea4c2
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: 7766add2-c5f2-4c11-ba84-fa7ffbcb067c
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #2E86AB; margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">📊 Sales Performance Analysis Dashboard</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"font-size: 12px; color: #666; text-align: center; margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">Generated on March 26, 2026 at 22:27 UTC</span></p><div style=\"background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 8px; margin: 10px 0;\"><h3 style=\"color: #2E86AB; margin-bottom: 15px;\">📈 Key Performance Insights</h3><p style=\"margin-bottom: 10px; line-height: 1.6;\"><strong style=\"color: #E63946;\">Sales Trend:</strong> Monthly sales showing strong performance with peak months in 2023 reaching $24.8M, indicating seasonal patterns and growth opportunities.</p><p style=\"margin-bottom: 10px; line-height: 1.6;\"><strong style=\"color: #F77F00;\">Store Performance:</strong> Top performing stores by quantity include Nevada locations (89145: 1.28M units, 89052: 1.19M units) and Montana stores (59718: 1.2M units, 59106: 1.19M units).</p><p style=\"margin-bottom: 10px; line-height: 1.6;\"><strong style=\"color: #06FFA5;\">Time Series Analysis:</strong> Sales data spans from 2020 to 2026, showing recovery and growth patterns with consistent monthly performance tracking.</p><p style=\"line-height: 1.6;\"><strong style=\"color: #7209B7;\">Geographic Insights:</strong> Store-level analysis reveals regional performance variations, enabling targeted optimization strategies and resource allocation decisions.</p></div><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: Show total sales as a time series KPI.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(date)
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"60000a21-d356-4676-af12-35780de4247f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"86b0a26c-870d-4a1c-8d3f-1988b2a0bfb8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 41e7eb53-c7f0-4cbf-bfaf-c6f09353f238
+  - id: Viz_3
+    answer:
+      name: Show total quantity purchased by store as a KPI.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[quantity purchased] [store]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - store
+        - Total quantity purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: store
+        axis_configs:
+        - "y":
+          - Total quantity purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ec733a19-8dfe-4bec-b932-01a06d31fbe9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"819a9f63-147a-439e-a263-ab22de8ed31f\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 01add061-d387-4e53-ae3c-a0b77cff1059
+  - id: Viz_4
+    answer:
+      name: Show total sales monthly over time.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(date)
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"75f216b1-defd-4789-b83c-fcfcec6c073a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"e84ae446-78b2-4b3f-8192-3f8fcafd60be\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 02a4b740-3825-4984-b611-7c7fb3e35ff9
+  - id: Viz_5
+    answer:
+      name: Show total sales by store over time.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly [store]"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Month(date)
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+          color:
+          - store
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"79ae896e-7a56-4679-b926-fa8d1783b15a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"55b0cee8-588f-421f-a8ac-27c57b6428fc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4d5353b2-e18f-46bc-8bfc-2804197645dc
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

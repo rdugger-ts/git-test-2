@@ -1,0 +1,35 @@
+obj_id: TotalCountIdbyStagename-30cebf94
+answer:
+  name: Total Count Id by Stagename
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "count [Id] [Stagename]"
+  answer_columns:
+  - name: Number of Id
+  - name: Stagename
+  table:
+    table_columns:
+    - column_id: Number of Id
+      show_headline: false
+    - column_id: Stagename
+      show_headline: false
+    ordered_column_ids:
+    - Stagename
+    - Number of Id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Number of Id
+    - column_id: Stagename
+    axis_configs:
+    - x:
+      - Stagename
+      "y":
+      - Number of Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Stagename\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Number of Id\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"8674cb6a-f36b-4b57-9a7b-1f13306b7594\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Id\"],\"isOpposite\": false}},{\"id\": \"af93dcfb-2d76-4f7a-9d69-aef94e998fb5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Stagename\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Id\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
