@@ -183,36 +183,31 @@ print("====================================")
 # This is primarily useful for CONNECTION imports where you want to confirm
 # that the same token can immediately see what was just created.
 # Optional post-import verification search using direct REST call
+# Optional post-import verification for CONNECTION using direct REST call
 try:
-    print("Running post-import verification search via direct REST call...")
+    if object_type == "CONNECTION":
+        print("Running post-import connection verification via direct REST call...")
 
-    headers = {
-        "Authorization": f"Bearer {ts.bearer_token}",
-        "Content-Type": "application/json",
-    }
+        headers = {
+            "Authorization": f"Bearer {ts.bearer_token}",
+            "Accept": "application/json",
+        }
 
-    search_payload = {
-        "metadata": [
-            {
-                "type": "DATA_SOURCE"
-            }
-        ],
-        "record_size": 100
-    }
+        resp = requests.get(
+            url=f"{server}/tspublic/v1/connection/list",
+            headers=headers,
+            timeout=60,
+        )
 
-    resp = requests.post(
-        url=f"{server}/api/rest/2.0/metadata/search",
-        headers=headers,
-        json=search_payload,
-        timeout=60,
-    )
+        print(f"Verification connection-list HTTP status: {resp.status_code}")
+        print("Verification connection-list response:")
+        print(json.dumps(resp.json(), indent=2))
 
-    print(f"Verification search HTTP status: {resp.status_code}")
-    print("Verification search response:")
-    print(json.dumps(resp.json(), indent=2))
+    else:
+        print(f"No CONNECTION verification needed for OBJECT_TYPE={object_type}")
 
 except Exception as e:
-    print("Post-import verification search failed with unexpected error.")
+    print("Post-import verification failed with unexpected error.")
     print(str(e))
 
 print("=========== IMPORT END ===========")
