@@ -1,0 +1,34 @@
+obj_id: TotalOpen-4b8fa43f
+answer:
+  name: Copy of Total Open
+  tables:
+  - id: TSEMBED
+    name: TSEMBED
+    obj_id: TSEMBED-5f92ed57
+  search_query: "count [Id]"
+  answer_columns:
+  - name: Number of Id
+  table:
+    table_columns:
+    - column_id: Number of Id
+      show_headline: false
+    ordered_column_ids:
+    - Number of Id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: MUZE_STUDIO
+    chart_columns:
+    - column_id: Number of Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Number of Id\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"e2a3eec9-67b5-4682-a587-ec8561e81821\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Id\"],\"isOpposite\": false}},{\"id\": \"12a68ba4-223e-4192-a6ae-429eef4e89e6\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#FCC838\"}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: fields
+        columns:
+        - Number of Id
+        mode: COLUMN_DRIVEN
+    custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"LyoqCiAqIEF2YWlsYWJsZSBDb2x1bW5zOgogKiAiTnVtYmVyIG9mIElkIgogKiAiTWVhc3VyZSBuYW1lcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqICJNZWFzdXJlIHZhbHVlcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqIC0tLSBFTkQgLS0tIAogKi8KCmNvbnN0IHsgZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSB9ID0gdml6OwoKdHJ5IHsKICBjb25zdCB0c0RhdGFNb2RlbCA9IGdldERhdGFGcm9tU2VhcmNoUXVlcnkoKTsKICBjb25zdCByYXcgPSB0c0RhdGFNb2RlbC5nZXREYXRhKCk7CgogIGNvbnNvbGUubG9nKCJGdWxsIERhdGFNb2RlbCBvYmplY3Q6IiwgdHNEYXRhTW9kZWwpOwogIGNvbnNvbGUubG9nKCJSYXcgZGF0YSBhcnJheToiLCByYXcuZGF0YSk7CiAgY29uc29sZS5sb2coIlNjaGVtYSBkZWZpbml0aW9uOiIsIHJhdy5zY2hlbWEpOwoKICBjb25zdCB2YWx1ZSA9IHJhdy5kYXRhPy5bMF0/LlswXTsKICBjb25zdCBlbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImtwaS12YWx1ZSIpOwoKICBpZiAodHlwZW9mIHZhbHVlICE9PSAibnVtYmVyIikgewogICAgdGhyb3cgbmV3IEVycm9yKCJObyBudW1lcmljIHZhbHVlIGZvdW5kIGluIHRoZSBmaXJzdCBjb2x1bW4iKTsKICB9CgogIGNvbnN0IGZvcm1hdHRlZCA9IHZhbHVlLnRvTG9jYWxlU3RyaW5nKCk7CiAgZWxlbWVudC50ZXh0Q29udGVudCA9IGZvcm1hdHRlZDsKICBlbGVtZW50LnNldEF0dHJpYnV0ZSgiZGF0YS1rcGktdmFsdWUiLCBmb3JtYXR0ZWQpOwoKICBjb25zb2xlLmxvZyhgUmVuZGVyZWQgS1BJIHZhbHVlOiAke2Zvcm1hdHRlZH1gKTsKfSBjYXRjaCAoZXJyKSB7CiAgY29uc29sZS5lcnJvcigiRmFpbGVkIHRvIGRpc3BsYXkgS1BJOiIsIGVycik7CiAgY29uc3QgZmFsbGJhY2sgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgia3BpLXZhbHVlIik7CiAgZmFsbGJhY2sudGV4dENvbnRlbnQgPSAiRXJyb3IiOwogIGZhbGxiYWNrLnNldEF0dHJpYnV0ZSgiZGF0YS1rcGktdmFsdWUiLCAiRXJyb3IiKTsKfQoKdml6LmV2ZW50cy5lbWl0UmVuZGVyQ29tcGxldGVkRXZlbnQoKTs\\u003d\\\",\\\"cssCodeBase64\\\":\\\"LyogaHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKICAgIG92ZXJmbG93OiBoaWRkZW47ICAgICAgIAogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7ICAKfSAqLwoKaHRtbCwgYm9keSB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgaGVpZ2h0OiAxMDAlOwp9CgojY2hhcnQgewogIHdpZHRoOiAxMDAlOwogIGhlaWdodDogMTAwJTsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogY2VudGVyOwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7Cn0KCi5rcGktY29udGFpbmVyIHsKICB3aWR0aDogMTAwJTsKICBtYXgtd2lkdGg6IDEyMDBweDsKICBhc3BlY3QtcmF0aW86IDQgLyAxOwogIHBhZGRpbmc6IDJ2aDsKICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICBhbGlnbi1pdGVtczogY2VudGVyOwp9Cgoja3BpLXZhbHVlIHsKICAvKmZvbnQtc2l6ZTogY2xhbXAoNDBweCwgOHZ3LCAxMjBweCk7IC8qIFNjYWxlcyBidXQgc3RheXMgcmVhZGFibGUgKi8KICBmb250LXNpemU6IGNsYW1wKDU2cHgsIDE2dncsIDE0MHB4KTsKICBmb250LXdlaWdodDogYm9sZDsKICBsaW5lLWhlaWdodDogMS4xOwp9Cgoua3BpLWxhYmVsIHsKICBmb250LXNpemU6IGNsYW1wKDE0cHgsIDJ2dywgMjhweCk7CiAgY29sb3I6IHJlZDsKfQo\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PCEtLSA8ZGl2IGlkPSJjaGFydCI+CiAgPGRpdiBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyBwYWRkaW5nOiAyMHB4OyBoZWlnaHQ6IDEwMCU7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ij4KICAgIDxkaXYgaWQ9ImtwaS12YWx1ZSIgc3R5bGU9ImZvbnQtc2l6ZTogNzJweDsgZm9udC13ZWlnaHQ6IGJvbGQ7Ij4uLi48L2Rpdj4KICAgIDxkaXYgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgY29sb3I6IHJlZDsiPlRvdGFsIE9wZW48L2Rpdj4KICA8L2Rpdj4KPC9kaXY+IC0tPgoKPGRpdiBpZD0iY2hhcnQiPgogIDxkaXYgY2xhc3M9ImtwaS1jb250YWluZXIiPgogICAgPGRpdiBpZD0ia3BpLXZhbHVlIiBkYXRhLWtwaS12YWx1ZT0iLi4uIj4uLi48L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImtwaS1sYWJlbCI+VG90YWwgT3BwczwvZGl2PgogIDwvZGl2Pgo8L2Rpdj4KCg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[53.94366197183098,46.05633802816902],\\\"editorConsoleSplitSizes\\\":[99,1]}}\",\"axisVisualProps\":{},\"columnVisualProps\":{},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{},\"legendVisualProps\":{},\"displayVisualProps\":{}}"
+  display_mode: CHART_MODE
+  dynamic_name: Copy of Total Open

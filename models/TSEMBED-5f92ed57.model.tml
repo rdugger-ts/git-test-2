@@ -1,0 +1,419 @@
+obj_id: TSEMBED-5f92ed57
+model:
+  name: TSEMBED
+  description: The TSEMBED worksheet is a comprehensive dataset that includes a variety of information related to accounts, such as account creation details, identification, ownership, and type. It also encompasses financial data like annual revenue, expected revenue, and specific transaction amounts. Additionally, the worksheet provides geographical information for both billing and shipping addresses, including city, country, postal code, and precise geolocation coordinates. (AI generated)
+  model_tables:
+  - name: TSEMBED Dev Org Export - Account
+    joins:
+    - with: TSEMBED Dev Org - Opps
+      'on': '[TSEMBED Dev Org Export - Account::Id] = [TSEMBED Dev Org - Opps::AccountId]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+    obj_id: TSEMBEDDevOrgExport-Account-04a39745
+  - name: TSEMBED Dev Org - Opps
+    obj_id: TSEMBEDDevOrg-Opps-02577521
+  formulas:
+  - id: formula_AI Translate Name
+    name: AI Translate Name
+    expr: sql_string_op ( 'SNOWFLAKE.CORTEX.TRANSLATE({0}, {1}, {2})' , [TSEMBED Dev Org - Opps::Name] , 'en' , [formula_Language Selected 2] )
+  - id: formula_AI Translate Stage Name
+    name: AI Translate Stage Name
+    expr: sql_string_op ( 'SNOWFLAKE.CORTEX.TRANSLATE({0}, {1}, {2})' , [TSEMBED Dev Org - Opps::StageName] , 'en' , [formula_Language Selected 2] )
+  - id: formula_Language Selected 2
+    name: Language Selected 2
+    expr: '[Language] '
+  - id: formula_SF Opp Link
+    name: SF Opp Link
+    expr: concat ( "{caption}" , [TSEMBED Dev Org - Opps::Id] , "{/caption}" , 'https://tsembed-dev-ed.develop.lightning.force.com/lightning/r/opportunity/' , [TSEMBED Dev Org - Opps::Id] , '/view' )
+  - id: formula__PostalCd_filter
+    name: _PostalCd_filter
+    expr: '[Postal Code Param] = [formula__shipPostalCdString] '
+  - id: formula__shipPostalCdString
+    name: _shipPostalCdString
+    expr: 'to_string ( [TSEMBED Dev Org Export - Account::ShippingPostalCode] ) '
+  columns:
+  - name: Billingstreet
+    column_id: TSEMBED Dev Org Export - Account::BillingStreet
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: SF Opp Link
+    description: url for each opportunity
+    formula_id: formula_SF Opp Link
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Salesforce Opportunity Link
+      - Opportunity Link
+      - opp link
+      synonym_type: USER_DEFINED
+  - name: Shippingcity
+    column_id: TSEMBED Dev Org Export - Account::ShippingCity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - city
+      synonym_type: USER_DEFINED
+  - name: Shippingcountry
+    column_id: TSEMBED Dev Org Export - Account::ShippingCountry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - country
+      synonym_type: USER_DEFINED
+  - name: Accountnumber
+    column_id: TSEMBED Dev Org Export - Account::AccountNumber
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billinglatitude
+    column_id: TSEMBED Dev Org Export - Account::BillingLatitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Numberofemployees
+    column_id: TSEMBED Dev Org Export - Account::NumberOfEmployees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Parentid
+    column_id: TSEMBED Dev Org Export - Account::ParentId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billinggeocodeaccuracy
+    column_id: TSEMBED Dev Org Export - Account::BillingGeocodeAccuracy
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Account Ownerid
+    column_id: TSEMBED Dev Org Export - Account::OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billingpostalcode
+    column_id: TSEMBED Dev Org Export - Account::BillingPostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - zip code
+      - zip
+      - postal code
+      synonym_type: USER_DEFINED
+  - name: Account Createddate
+    column_id: TSEMBED Dev Org Export - Account::CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - create data
+      format_pattern: MM/dd/yyyy
+      synonym_type: USER_DEFINED
+  - name: Shippingstreet
+    column_id: TSEMBED Dev Org Export - Account::ShippingStreet
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Shippinglatitude
+    column_id: TSEMBED Dev Org Export - Account::ShippingLatitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Active C
+    column_id: TSEMBED Dev Org Export - Account::Active__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Tickersymbol
+    column_id: TSEMBED Dev Org Export - Account::TickerSymbol
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Phone
+    column_id: TSEMBED Dev Org Export - Account::Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billingcity
+    column_id: TSEMBED Dev Org Export - Account::BillingCity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billingcountry
+    column_id: TSEMBED Dev Org Export - Account::BillingCountry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Annualrevenue
+    column_id: TSEMBED Dev Org Export - Account::AnnualRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Shippingpostalcode
+    column_id: TSEMBED Dev Org Export - Account::ShippingPostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Website
+    column_id: TSEMBED Dev Org Export - Account::Website
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Createdbyid
+    column_id: TSEMBED Dev Org Export - Account::CreatedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Account Type
+    column_id: TSEMBED Dev Org Export - Account::Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Account Name
+    column_id: TSEMBED Dev Org Export - Account::Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Shippinglongitude
+    column_id: TSEMBED Dev Org Export - Account::ShippingLongitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billinglongitude
+    column_id: TSEMBED Dev Org Export - Account::BillingLongitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Billingstate
+    column_id: TSEMBED Dev Org Export - Account::BillingState
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Shippingstate
+    column_id: TSEMBED Dev Org Export - Account::ShippingState
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Account Id
+    column_id: TSEMBED Dev Org - Opps::AccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Amount
+    column_id: TSEMBED Dev Org - Opps::Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - revenue
+      - acv
+      synonym_type: USER_DEFINED
+  - name: Closedate
+    column_id: TSEMBED Dev Org - Opps::CloseDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - close date
+      format_pattern: MM/dd/yyyy
+      synonym_type: USER_DEFINED
+  - name: Createddate
+    column_id: TSEMBED Dev Org - Opps::CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+      synonym_type: USER_DEFINED
+  - name: Description
+    column_id: TSEMBED Dev Org - Opps::Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Expectedrevenue
+    column_id: TSEMBED Dev Org - Opps::ExpectedRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Forecastcategory
+    column_id: TSEMBED Dev Org - Opps::ForecastCategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Id
+    description: unique identifier for an opportunity
+    column_id: TSEMBED Dev Org - Opps::Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - opp id
+      - opportunity id
+      synonym_type: USER_DEFINED
+  - name: Isclosed
+    column_id: TSEMBED Dev Org - Opps::IsClosed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Iswon
+    column_id: TSEMBED Dev Org - Opps::IsWon
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Lastactivitydate
+    column_id: TSEMBED Dev Org - Opps::LastActivityDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Name
+    description: unique name for each opportunity
+    column_id: TSEMBED Dev Org - Opps::Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - opp name
+      - opportunity name
+      synonym_type: USER_DEFINED
+  - name: Ownerid
+    column_id: TSEMBED Dev Org - Opps::OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Partneraccountid
+    column_id: TSEMBED Dev Org - Opps::PartnerAccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: Stagename
+    description: current stage of the opportunity.  Closed Won is an opportunity we've won.  All others can be considered open
+    column_id: TSEMBED Dev Org - Opps::StageName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - opp stage
+      - opportunity stage
+      - stage
+      synonym_type: USER_DEFINED
+  - name: Type
+    column_id: TSEMBED Dev Org - Opps::Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: USER_DEFINED
+  - name: _shipPostalCdString
+    formula_id: formula__shipPostalCdString
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: _PostalCd_filter
+    formula_id: formula__PostalCd_filter
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Language Selected 2
+    formula_id: formula_Language Selected 2
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: AI Translate Name
+    formula_id: formula_AI Translate Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: AI Translate Stage Name
+    formula_id: formula_AI Translate Stage Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
+  parameters:
+  - id: b27b5367-22fd-44a3-87d3-54e4ecc191ea
+    name: Language
+    data_type: CHAR
+    default_value: en
+    list_config:
+      list_choice:
+      - value: es
+        display_name: Spanish
+      - value: en
+        display_name: English
+      - value: fr
+        display_name: French
+      - value: zh
+        display_name: Chinese
+      - value: nl
+        display_name: Dutch
+      - value: de
+        display_name: German
+      - value: hi
+        display_name: Hindi
+      - value: it
+        display_name: Italian
+      - value: ja
+        display_name: Japanese
+      - value: ko
+        display_name: Korean
+      - value: pl
+        display_name: Polish
+      - value: pt
+        display_name: Portuguese
+      - value: ru
+        display_name: Russian
+      - value: sv
+        display_name: Swedish
+    description: ''
+  - id: aaca0392-2a31-4450-a224-e5238827ff06
+    name: Postal Code Param
+    data_type: CHAR
+    default_value: '10036'
+    description: ''

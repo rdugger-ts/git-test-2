@@ -1,0 +1,94 @@
+obj_id: UTCTimezoneConversion-c11326cc
+answer:
+  name: UTC Timezone Conversion
+  tables:
+  - id: Orders Raw
+    name: Orders Raw
+    obj_id: OrdersRaw-f75c466a
+  formulas:
+  - id: formula_Order Date – AUS
+    name: Order Date – AUS
+    expr: "sql_date_time_op ( \"CONVERT_TIMEZONE('UTC','Australia/Sydney',{0})\" , [Order Date] )"
+    was_auto_generated: false
+  - id: formula_Order Date – Eastern
+    name: Order Date – Eastern
+    expr: "sql_date_time_op ( \"CONVERT_TIMEZONE('UTC','America/New_York',{0})\" , [Order Date] )"
+    was_auto_generated: false
+  - id: formula_Order Date – Pacific
+    name: Order Date – Pacific
+    expr: "sql_date_time_op ( \"CONVERT_TIMEZONE('UTC','America/Los_Angeles',{0})\" , [Order Date] ) "
+    was_auto_generated: false
+  - id: formula_Order Date – UK
+    name: Order Date – UK
+    expr: "sql_date_time_op ( \"CONVERT_TIMEZONE('UTC','Europe/London',{0})\" , [Order Date] )"
+    was_auto_generated: false
+  search_query: "[Region] [Region].south [Order Date] [Order Date].daily [Sales] [Order Date].november [formula_Order Date – Pacific] [formula_Order Date – Pacific].daily [formula_Order Date – Eastern] [formula_Order Date – Eastern].daily [formula_Order Date – UK] [formula_Order Date – UK].daily [formula_Order Date – AUS] [formula_Order Date – AUS].daily"
+  answer_columns:
+  - name: Day(Order Date – AUS)
+  - name: Day(Order Date – Eastern)
+  - name: Day(Order Date – Pacific)
+  - name: Day(Order Date – UK)
+  - name: Day(Order Date)
+  - name: Region
+  - name: Total Sales
+  table:
+    table_columns:
+    - column_id: Day(Order Date – AUS)
+      show_headline: false
+    - column_id: Day(Order Date – Eastern)
+      show_headline: false
+    - column_id: Day(Order Date – Pacific)
+      show_headline: false
+    - column_id: Day(Order Date – UK)
+      show_headline: false
+    - column_id: Day(Order Date)
+      show_headline: false
+    - column_id: Region
+      show_headline: false
+    - column_id: Total Sales
+      show_headline: false
+    ordered_column_ids:
+    - Region
+    - Day(Order Date)
+    - Day(Order Date – Pacific)
+    - Day(Order Date – Eastern)
+    - Day(Order Date – UK)
+    - Day(Order Date – AUS)
+    - Total Sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Day(Order Date – AUS)
+    - column_id: Day(Order Date – Eastern)
+    - column_id: Day(Order Date – Pacific)
+    - column_id: Day(Order Date – UK)
+    - column_id: Day(Order Date)
+    - column_id: Region
+    - column_id: Total Sales
+    axis_configs:
+    - x:
+      - Day(Order Date)
+      "y":
+      - Total Sales
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Day(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bb556256-6ce6-4eb4-9e3c-379428b75b39\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"564f287d-f79e-4cef-8f7b-dbc593173a14\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
+  display_mode: TABLE_MODE
+  parameters:
+  - id: d57e1644-d9eb-4036-a0a2-ab71d4d4b27c
+    name: Timezone
+    data_type: CHAR
+    default_value: Pacific
+    list_config:
+      list_choice:
+      - value: Pacific
+        display_name: Pacific
+      - value: Eastern
+        display_name: Eastern
+      - value: UK
+        display_name: UK
+      - value: Australia
+        display_name: Australia
+    description: ""
+  dynamic_name: UTC Timezone Conversion

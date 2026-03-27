@@ -1,0 +1,90 @@
+obj_id: TargettrackingSVG-f447a167
+answer:
+  name: Target tracking SVG v2
+  tables:
+  - id: RAD Orders CLS
+    name: RAD Orders CLS
+    obj_id: RADOrdersCLS-13a4d8a8
+  formulas:
+  - id: formula_% change
+    name: '% change'
+    expr: "( [Sales(2021)] - [Sales(2022)] ) / [Sales(2022)] "
+    was_auto_generated: false
+  - id: formula_Target tracking 2
+    name: Target tracking 2
+    expr: "if ( sum ( [Sales] ) > 0 ) then concat ( '<div title=\"' , [formula_Percent of Target] , '% of 190k target\">' , '<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"10\" width=\"123\">' , '<rect x=\"0\" y=\"0\" width=\"100\" height=\"10\" rx=\"3\" ry=\"3\" style=\"fill:#cf7673\" />' , '<rect x=\"80\" y=\"0\" width=\"20\" height=\"10\" style=\"fill:#ffefea\"/>' , '<rect x=\"100\" y=\"0\" width=\"23\" height=\"10\" rx=\"3\" ry=\"3\" style=\"fill:#8bd7b3\"/>' , '<rect x=\"' , [formula_Percent of Target] , '\" y=\"0\" width=\"3\" height=\"10\" style=\"fill:black\" />' , '</svg>' , '</div>' ) else ' ' "
+    was_auto_generated: false
+  - id: formula_Target tracking
+    name: Target tracking
+    expr: "if ( sum ( [Sales] ) > 0 ) then concat ( '<div title=\"' , [formula_Percent of Target] , '% of 190k target\">' , '<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"10\" width=\"123\">' , '<rect x=\"0\" y=\"2\" width=\"120\" height=\"6\" rx=\"3\" ry=\"3\" style=\"fill:#cf7673\" />' , '<rect x=\"0\" y=\"2\" width=\"' , [formula_Percent of Target] , '\" height=\"6\" rx=\"3\" ry=\"3\"style=\"fill:black\" />' , '</svg>' , '</div>' ) else ' '"
+    was_auto_generated: false
+  - id: formula_Percent of Target
+    name: Percent of Target
+    expr: to_string ( ( random ( ) * .5 + .5 ) * 100 )
+    was_auto_generated: false
+  search_query: "[formula_Percent of Target] [Segment] [Order Date].2022 vs [Order Date].2021 [Sales] [Order Date].2022 [formula_% change] [formula_Target tracking] [formula_Target tracking 2]"
+  answer_columns:
+  - name: '% change'
+  - name: Percent of Target
+  - name: Sales(2021)
+  - name: Sales(2022)
+  - name: Segment
+  - name: Target tracking 2(2021)
+  - name: Target tracking 2(2022)
+  - name: Target tracking(2021)
+  - name: Target tracking(2022)
+  table:
+    table_columns:
+    - column_id: '% change'
+      show_headline: false
+    - column_id: Percent of Target
+      show_headline: false
+    - column_id: Sales(2021)
+      show_headline: false
+    - column_id: Sales(2022)
+      show_headline: false
+    - column_id: Segment
+      show_headline: false
+    - column_id: Target tracking 2(2021)
+      show_headline: false
+    - column_id: Target tracking 2(2022)
+      show_headline: false
+    - column_id: Target tracking(2021)
+      show_headline: false
+    - column_id: Target tracking(2022)
+      show_headline: false
+    ordered_column_ids:
+    - Segment
+    - Percent of Target
+    - Target tracking(2022)
+    - Target tracking(2021)
+    - Target tracking 2(2021)
+    - Target tracking 2(2022)
+    - '% change'
+    - Sales(2021)
+    - Sales(2022)
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Segment\",\"Percent of Target\",\"Target tracking(2022)\",\"Target tracking 2(2022)\",\"% change\",\"Sales(2021)\",\"Sales(2022)\",\"Target tracking 2(2021)\",\"Target tracking(2021)\"],\"columnProperties\": [{\"columnId\": \"Percent of Target\",\"columnProperty\": {\"isHidden\": false}},{\"columnId\": \"Target tracking 2(2021)\",\"columnProperty\": {\"isHidden\": true}},{\"columnId\": \"Target tracking(2021)\",\"columnProperty\": {\"isHidden\": true}}]}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: '% change'
+    - column_id: Percent of Target
+    - column_id: Sales(2021)
+    - column_id: Sales(2022)
+    - column_id: Segment
+    - column_id: Target tracking 2(2021)
+    - column_id: Target tracking 2(2022)
+    - column_id: Target tracking(2021)
+    - column_id: Target tracking(2022)
+    axis_configs:
+    - x:
+      - Percent of Target
+      "y":
+      - '% change'
+      - Sales(2021)
+      - Sales(2022)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Percent of Target\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Sales(2021)\",\"columnProperty\": {}},{\"columnId\": \"Sales(2022)\",\"columnProperty\": {}},{\"columnId\": \"% change\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dae3c3a4-7b0f-4577-a742-787f9c43aea2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"% change\"],\"isOpposite\": false}},{\"id\": \"9a27db5a-1689-4274-9f72-8f9f63e4afbd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales(2021)\"],\"isOpposite\": true}},{\"id\": \"499b2f25-133c-4ce1-966a-7d334b563634\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales(2022)\"],\"isOpposite\": true}},{\"id\": \"a7abe31a-abd7-4c9e-9406-77ba585dcaed\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Percent of Target\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Sales(2021)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Sales(2022)\",\"color\": \"#2E75F0\"}]}"
+  display_mode: TABLE_MODE
+  dynamic_name: Target tracking SVG v2

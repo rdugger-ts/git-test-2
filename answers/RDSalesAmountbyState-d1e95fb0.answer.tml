@@ -1,0 +1,38 @@
+obj_id: RDSalesAmountbyState-d1e95fb0
+answer:
+  name: RD Sales Amount by State
+  tables:
+  - id: Retail Sales WS
+    name: Retail Sales WS
+    obj_id: RetailSalesWS-9b1deb72
+  search_query: "sum [Sales Amount] [State]"
+  answer_columns:
+  - name: State
+  - name: Total Sales Amount
+  table:
+    table_columns:
+    - column_id: State
+      show_headline: false
+    - column_id: Total Sales Amount
+      show_headline: false
+    ordered_column_ids:
+    - State
+    - Total Sales Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: GEO_AREA
+    chart_columns:
+    - column_id: State
+    - column_id: Total Sales Amount
+    axis_configs:
+    - x:
+      - State
+      "y":
+      - Total Sales Amount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.652779600649687,\"extent\": [-1.2028580974959526E7,-7473114.891112797,-9602163.94907489,1.5538711096309226E7]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"multiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#a6d2ff\",\"#3873c1\"]}]}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+  display_mode: CHART_MODE
+  parameter_values:
+  - key: Data Security PARAM
+    value: abgdezetiklmnzoprstupcpos
