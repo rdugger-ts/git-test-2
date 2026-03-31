@@ -12,7 +12,7 @@ liveboard:
       formulas:
       - id: formula__salesQty
         name: _salesQty
-        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] )"
         was_auto_generated: false
       search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending"
       answer_columns:
@@ -47,11 +47,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: 202a5b82-53ad-4220-a788-aed94d3f1a5d
-    action_object_associations:
-    - action_name: Get Answer Data
-      context: CONTEXT_MENU
-      enabled: true
+    viz_guid: 7d499b88-1e18-4d9d-a1cb-7b15f7d882b8
   - id: Viz_2
     answer:
       name: Total Sales Amount by Monthly Sales Date
@@ -90,7 +86,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: 35aa5631-0cc7-466c-b18d-29c71d8ee919
+    viz_guid: 2e1c346f-dab9-4113-a29c-c7ecd29d568b
   - id: Viz_3
     answer:
       name: Total Quantity Purchased by Monthly Sales Date
@@ -129,7 +125,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: 29e85356-b50d-42ab-90dc-819315337259
+    viz_guid: 2165d615-1ccd-485a-88e9-08eb50907ff3
   - id: Viz_4
     answer:
       name: Total Sales Amount by State
@@ -178,11 +174,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: c4613537-d1fe-4dac-9df5-52026b4fc950
-    action_object_associations:
-    - action_name: Open Case
-      context: MENU
-      enabled: true
+    viz_guid: e320acb5-6034-4e83-a196-8b0e6adb7444
   - id: Viz_5
     answer:
       name: Total Sales Amount by Monthly Sales Date
@@ -221,7 +213,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: 7eb3c623-8555-46dd-ab5b-d62f1ef9a4f3
+    viz_guid: edbca2c7-6117-475b-93ad-3f5983500698
   - id: Viz_6
     answer:
       name: Total Sales Comparison
@@ -232,7 +224,7 @@ liveboard:
       formulas:
       - id: formula__salesQty
         name: _salesQty
-        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] )"
         was_auto_generated: false
       search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending [Sales Date].2019 vs [Sales Date].2020 [Sales Date] [Sales Date].monthly"
       answer_columns:
@@ -276,7 +268,7 @@ liveboard:
       parameter_values:
       - key: Data Security PARAM
         value: abgdezetiklmnzoprstupcpos
-    viz_guid: 62d17f45-403d-4c83-bd09-7f9b7605ca49
+    viz_guid: 55620415-4931-47ed-8e1f-1c1151a9f964
   groups:
   - id: Group_1
     name: Key Indicators
@@ -284,7 +276,7 @@ liveboard:
     - Viz_5
     - Viz_2
     - Viz_3
-    group_guid: 3dfc789e-88bf-44e7-b437-7a4184c5be91
+    group_guid: b0baf79d-6eb4-4b15-b595-afe72ad8f830
   filters:
   - column:
     - Product Type
@@ -374,22 +366,7 @@ liveboard:
   - name: State
     type: FILTER
   views:
-  - view_guid: a09436be-b646-4432-bb9e-3148e6f11de1
-    name: Shorts
-    view_filters:
-    - column:
-      - Product Type
-      oper: in
-      values:
-      - shorts
-    - column:
-      - Region
-      oper: in
-    - column:
-      - State
-      oper: in
-    is_public: true
-  - view_guid: 1e6b7aca-7756-4711-9611-ad71a811a37f
+  - view_guid: f9de201a-9e52-4b5b-9235-c5382275a4d9
     name: Jeans
     view_filters:
     - column:
@@ -399,10 +376,25 @@ liveboard:
       - Jeans
     - column:
       - Region
-      oper: in
+      oper: =
     - column:
       - State
+      oper: =
+    is_public: true
+  - view_guid: 38664090-5272-42d7-8520-f65318d1c962
+    name: Shorts
+    view_filters:
+    - column:
+      - Product Type
       oper: in
+      values:
+      - shorts
+    - column:
+      - Region
+      oper: =
+    - column:
+      - State
+      oper: =
     is_public: true
   style:
     style_properties:
@@ -418,3 +410,5 @@ liveboard:
       value: "true"
     - name: hide_tile_description
       value: "true"
+    - name: kpi_hero_font_size
+      value: M

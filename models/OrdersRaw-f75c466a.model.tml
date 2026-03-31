@@ -4,11 +4,11 @@ model:
   description: This worksheet provides a comprehensive overview of individual sales transactions, including details about the products sold, customer information, and shipping arrangements. It captures essential data such as location, timing, and financial metrics to support analysis of sales performance and customer trends. The worksheet is designed to help stakeholders understand order patterns and identify opportunities for business growth. (AI generated)
   model_tables:
   - name: ORDERS
-    obj_id: ORDERS-ab5e691a
+    obj_id: ORDERS_RAD_SUPERSTORE
   formulas:
   - id: formula_Order Month Name
     name: Order Month Name
-    expr: 'month ( [ORDERS::order_date] ) '
+    expr: month ( [ORDERS::order_date] )
   columns:
   - name: Category
     column_id: ORDERS::category
