@@ -128,12 +128,12 @@ model:
     spotter_config:
       is_spotter_enabled: true
   parameters:
-  - id: b8c424dd-a897-49be-b460-8feaa2a7d27d
+  - id: beab0e20-1974-470e-a672-602f4d6b12e7
     name: Data Security PARAM
     data_type: CHAR
     default_value: Secured
     description: ''
-  - id: 9af79506-cfe6-4b86-854a-d1845f9e08f0
+  - id: 66b27a59-f4a2-4457-91c9-fa6c5ad1a2ef
     name: Sales Tax Rate
     data_type: DOUBLE
     default_value: '0.0'

@@ -21,16 +21,16 @@ model:
     expr: sql_string_op ( 'SNOWFLAKE.CORTEX.TRANSLATE({0}, {1}, {2})' , [TSEMBED Dev Org - Opps::StageName] , 'en' , [formula_Language Selected 2] )
   - id: formula_Language Selected 2
     name: Language Selected 2
-    expr: '[Language] '
+    expr: '[Language]'
   - id: formula_SF Opp Link
     name: SF Opp Link
     expr: concat ( "{caption}" , [TSEMBED Dev Org - Opps::Id] , "{/caption}" , 'https://tsembed-dev-ed.develop.lightning.force.com/lightning/r/opportunity/' , [TSEMBED Dev Org - Opps::Id] , '/view' )
   - id: formula__PostalCd_filter
     name: _PostalCd_filter
-    expr: '[Postal Code Param] = [formula__shipPostalCdString] '
+    expr: '[Postal Code Param] = [formula__shipPostalCdString]'
   - id: formula__shipPostalCdString
     name: _shipPostalCdString
-    expr: 'to_string ( [TSEMBED Dev Org Export - Account::ShippingPostalCode] ) '
+    expr: to_string ( [TSEMBED Dev Org Export - Account::ShippingPostalCode] )
   columns:
   - name: Billingstreet
     column_id: TSEMBED Dev Org Export - Account::BillingStreet
@@ -377,7 +377,7 @@ model:
     spotter_config:
       is_spotter_enabled: true
   parameters:
-  - id: b27b5367-22fd-44a3-87d3-54e4ecc191ea
+  - id: 8ba38de8-2863-4749-b1e9-71da9097af67
     name: Language
     data_type: CHAR
     default_value: en
@@ -412,7 +412,7 @@ model:
       - value: sv
         display_name: Swedish
     description: ''
-  - id: aaca0392-2a31-4450-a224-e5238827ff06
+  - id: b85933fc-9b1c-4cd6-a9fc-70b2d1e9a25d
     name: Postal Code Param
     data_type: CHAR
     default_value: '10036'

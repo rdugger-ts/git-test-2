@@ -68,7 +68,3 @@ answer:
     client_state: ""
     client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Number of Stagename\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7ea89558-bfe0-4578-8755-1052f45285bc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Stagename\"],\"isOpposite\": false}},{\"id\": \"045cb65a-5c37-4a98-9549-c949a23701a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Closedate)\"]}}],\"seriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#163772\"},{\"serieName\": \"Number of Stagename\",\"color\": \"#163772\"}],\"systemSeriesColors\": [{\"serieName\": \"969eae9f-3a58-49ef-a884-529a9d94b102\",\"color\": \"#163772\"},{\"serieName\": \"Number of Stagename\",\"color\": \"#FCC838\"}]}"
   display_mode: CHART_MODE
-  action_object_associations:
-  - action_name: Send to Slack
-    context: MENU
-    enabled: true
