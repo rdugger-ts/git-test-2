@@ -24,5 +24,5 @@ answer:
     - "y":
       - Unique Number of Id
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Unique Number of Id\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"97126aa2-ed3f-47c7-a6ce-be42e6e48f6a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Id\"],\"isOpposite\": false}},{\"id\": \"a5d417d0-8754-441e-8e88-695ac4414fa8\",\"properties\": {\"axisType\": \"X\"}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Unique Number of Id\",\"columnProperty\": {}},{\"columnId\": \"014a3ddc-046f-4f44-9c46-a92b5b5550c3\",\"columnProperty\": {}},{\"columnId\": \"4f659708-c181-48be-bf13-33ec33b65d8e\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"97126aa2-ed3f-47c7-a6ce-be42e6e48f6a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Id\"],\"isOpposite\": false}},{\"id\": \"a5d417d0-8754-441e-8e88-695ac4414fa8\",\"properties\": {\"axisType\": \"X\"}}]}"
   display_mode: CHART_MODE

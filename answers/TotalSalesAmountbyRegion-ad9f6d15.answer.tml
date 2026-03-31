@@ -8,9 +8,9 @@ answer:
   formulas:
   - id: formula__salesQty
     name: _salesQty
-    expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+    expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] )"
     was_auto_generated: false
-  search_query: "sum [Sales Amount] [Region] [State] [Region].south [State].arizona [State].Georgia"
+  search_query: "sum [Sales Amount] [Region] [State] [Region].south [State].arizona [State].georgia"
   answer_columns:
   - name: Region
   - name: State
