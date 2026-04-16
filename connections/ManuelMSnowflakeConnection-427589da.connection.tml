@@ -1,0 +1,19 @@
+obj_id: ManuelMSnowflakeConnection-427589da
+connection:
+  name: Manuel M Snowflake Connection
+  type: RDBMS_SNOWFLAKE
+  authentication_type: KEY_PAIR
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: se_demo_kp
+  - key: private_key
+    value: ""
+  - key: passphrase
+    value: ""
+  - key: role
+    value: SE_ROLE
+  - key: warehouse
+    value: SE_DEMO_WH
+  description: ""
