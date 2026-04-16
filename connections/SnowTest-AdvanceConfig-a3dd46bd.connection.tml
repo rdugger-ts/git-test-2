@@ -1,0 +1,19 @@
+obj_id: SnowTest-AdvanceConfig-a3dd46bd
+connection:
+  name: SnowTest - Advance Config
+  type: RDBMS_SNOWFLAKE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: se_demo
+  - key: password
+    value: ""
+  - key: role
+    value: SE_ROLE
+  - key: warehouse
+    value: SE_DEMO_WH
+  description: ""
+  selected_databases:
+  - RETAIL_BANKING_V1_1

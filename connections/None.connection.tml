@@ -1,0 +1,17 @@
+guid: 2a082d1d-b3f5-43da-9783-e931e109bf91
+connection:
+  name: Mode Superstore
+  type: RDBMS_MODE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: host
+    value: production-datawarehouse.mode.com
+  - key: port
+    value: "8444"
+  - key: user
+    value: 11a77b34febf
+  - key: password
+    value: ""
+  - key: useSystemTrustStore
+    value: "false"
+  description: ""
